@@ -29,7 +29,7 @@ const Navbar = () => {
   };
 
   return (
-    <Box position={'sticky'} top={'0'} overflow={'hidden'} >
+    <Box position={'sticky'} top={'0'} overflow={'hidden'}>
       <Flex
         w={'full'}
         height={'fit-content'}
@@ -40,7 +40,7 @@ const Navbar = () => {
         alignItems={'center'}
         flexDirection={['row-reverse', 'unset']}
       >
-        <Heading color={'teal.500'} fontSize={['1.3rem','1.7rem','2rem', '3rem']}>
+        <Heading color={'teal.500'} cursor={'pointer'} fontSize={['1.3rem','1.7rem','2rem', '3rem']}>
           Sushank Gautam
         </Heading>
 

@@ -23,6 +23,7 @@ import img11 from '../assets/icons8-sass-avatar.svg';
 import img12 from '../assets/icons8-c (1).svg';
 import Footer from './Footer';
 import About from './About'
+import Projects from './Projects';
 
 const Home = () => {
   return (
@@ -38,6 +39,11 @@ const Home = () => {
           w={['40', '', '48', '60']}
           h={['40', '', '48', '60']}
           borderRadius={['80px 50px 70px 10px', 'full']}
+          transition={'all 0.4s'}
+          cursor={'pointer'}
+          _hover={{
+            boxShadow: '0px 0px 20px rgba(0, 0, 0, 1)',
+          }}
         />
         <VStack
           w={['full', '', 'full', '70%']}
@@ -56,7 +62,7 @@ const Home = () => {
             Hey I'm
             <Heading fontSize={['30', '50']}>Sushank Gautam</Heading>
           </Text>
-          <Text fontSize={'20'} lineHeight={'160%'}>
+          <Text fontSize={['','','','20']} lineHeight={'160%'}>
             I'm currently a <strong>BCA 2nd year </strong> student with a
             passion for technology and coding. <strong>JAVA</strong> is my
             preferred programming language, although I am well-versed in other
@@ -76,7 +82,7 @@ const Home = () => {
 
       
         <About />
-      
+
 
       <Box
         height={['fit-content','','fit-content', '100vh']}
@@ -101,57 +107,57 @@ const Home = () => {
           flexWrap={'wrap'}
           fontWeight={'semibold'}
         >
-          <VStack>
-            <Image src={img1} boxSize={['5rem', '8rem']} cursor={'pointer'} />
+          <VStack cursor={'pointer'}>
+            <Image src={img1} boxSize={['5rem', '8rem']}  />
             <Text>HTML</Text>
-          </VStack>
-          <VStack>
-            <Image src={img2} boxSize={['5rem', '8rem']} cursor={'pointer'} />
+          </VStack >
+          <VStack cursor={'pointer'}>
+            <Image src={img2} boxSize={['5rem', '8rem']}  />
             <Text>CSS</Text>
           </VStack>
-          <VStack>
-            <Image src={img3} boxSize={['5rem', '8rem']} cursor={'pointer'} />
+          <VStack cursor={'pointer'}>
+            <Image src={img3} boxSize={['5rem', '8rem']}  />
             <Text>JAVASCRIPT</Text>
           </VStack>
-          <VStack>
-            <Image src={img4} boxSize={['5rem', '8rem']} cursor={'pointer'} />
+          <VStack cursor={'pointer'}>
+            <Image src={img4} boxSize={['5rem', '8rem']}  />
             <Text>TAILWIND</Text>
           </VStack>
-          <VStack>
-            <Image src={img5} boxSize={['5rem', '8rem']} xcursor={'pointer'} />
+          <VStack cursor={'pointer'}>
+            <Image src={img5} boxSize={['5rem', '8rem']}  />
             <Text>REACT JS</Text>
           </VStack>
-          <VStack>
-            <Image src={img6} boxSize={['5rem', '8rem']} cursor={'pointer'} />
+          <VStack cursor={'pointer'}>
+            <Image src={img6} boxSize={['5rem', '8rem']}  />
             <Text>GIT</Text>
           </VStack>
-          <VStack>
-            <Image src={img7} boxSize={['5rem', '8rem']} cursor={'pointer'} />
+          <VStack cursor={'pointer'}>
+            <Image src={img7} boxSize={['5rem', '8rem']}  />
             <Text>GITHUB</Text>
           </VStack>
-          <VStack>
-            <Image src={img8} boxSize={['5rem', '8rem']} cursor={'pointer'} />
+          <VStack cursor={'pointer'}>
+            <Image src={img8} boxSize={['5rem', '8rem']}  />
             <Text>JAVA</Text>
           </VStack>
-          <VStack>
-            <Image src={img9} boxSize={['5rem', '8rem']} cursor={'pointer'} />
+          <VStack cursor={'pointer'}>
+            <Image src={img9} boxSize={['5rem', '8rem']}  />
             <Text>C</Text>
           </VStack>
-          <VStack>
-            <Image src={img10} boxSize={['5rem', '8rem']} cursor={'pointer'} />
+          <VStack cursor={'pointer'}>
+            <Image src={img10} boxSize={['5rem', '8rem']} />
             <Text>CHAKRA UI</Text>
           </VStack>
-          <VStack>
-            <Image src={img11} boxSize={['5rem', '8rem']} cursor={'pointer'} />
+          <VStack cursor={'pointer'}>
+            <Image src={img11} boxSize={['5rem', '8rem']} />
             <Text>SASS</Text>
           </VStack>
-          <VStack>
-            <Image src={img12} boxSize={['5rem', '8rem']} cursor={'pointer'} />
+          <VStack cursor={'pointer'}>
+            <Image src={img12} boxSize={['5rem', '8rem']} />
             <Text>C++</Text>
           </VStack>
         </Flex>
       </Box>
-
+      <Projects />
       <Footer />
     </Box>
   );
