@@ -10,6 +10,8 @@ import {
   DrawerOverlay,
   DrawerContent,
   useDisclosure,
+  useColorMode,
+  DrawerCloseButton
 } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import { BiMenu } from 'react-icons/bi';
@@ -17,17 +19,19 @@ import { HashLink } from 'react-router-hash-link';
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { colorMode } = useColorMode();
 
   const smallScreenNavStyling = {
-    borderBottom: '1px solid white',
     padding: '2px 20px',
-    borderRadius: '10px',
   };
+  const backgroundColor = colorMode === 'dark' ? 'gray.800' : 'white';
+
 
   return (
     <Box
       position={'sticky'}
       boxShadow="0px 0px 10px rgba(0, 0, 0, 0.2)"
+      backgroundColor={backgroundColor}
       top={'0'}
       overflow={'hidden'}
       zIndex={9}
@@ -44,23 +48,23 @@ const Navbar = () => {
         <Heading
           color={'teal.500'}
           cursor={'pointer'}
-          fontSize={['1.3rem', '1.7rem', '2rem', '3rem']}
+          fontSize={['1.3rem', '1.7rem', '1.7rem', '3rem']}
         >
           Sushank Gautam
         </Heading>
 
         <Flex
-          gap={'10'}
+          gap={['','','8','10']}
           fontWeight={'bold'}
           paddingRight={['', '', '10', '20']}
-          fontSize={'18'}
+          fontSize={['','','','18']}
           display={['none', 'flex']}
         >
           <HashLink to={'/#home'} className="hover-link">
             Home
           </HashLink>
-          <HashLink to={'/#about'} className="hover-link">
-            About
+          <HashLink to={'/#education'} className="hover-link">
+            education
           </HashLink>
           <HashLink to={'/#skills'} className="hover-link">
             Skills
@@ -88,6 +92,7 @@ const Navbar = () => {
             >
               CHECK
             </DrawerHeader>
+            <DrawerCloseButton />
             <DrawerBody>
               <Flex
                 direction={'column'}
@@ -97,19 +102,19 @@ const Navbar = () => {
                 fontWeight={'semibold'}
                 color={'teal.400'}
               >
-                <Link to={'/'} style={smallScreenNavStyling}>
+                <HashLink onClick={onClose} to={'/#home'} style={smallScreenNavStyling}>
                   Home
-                </Link>
-                <HashLink to={'/#about'} style={smallScreenNavStyling}>
-                  About
                 </HashLink>
-                <HashLink to={'/#skills'} style={smallScreenNavStyling}>
+                <HashLink onClick={onClose} to={'/#education'} style={smallScreenNavStyling}>
+                education
+                </HashLink>
+                <HashLink onClick={onClose} to={'/#skills'} style={smallScreenNavStyling}>
                   Skills
                 </HashLink>
-                <HashLink to={'/#projects'} style={smallScreenNavStyling}>
+                <HashLink onClick={onClose} to={'/#projects'} style={smallScreenNavStyling}>
                   Projects
                 </HashLink>
-                <HashLink to={'/#contact'} style={smallScreenNavStyling}>
+                <HashLink onClick={onClose} to={'/#contact'} style={smallScreenNavStyling}>
                   Contact
                 </HashLink>
               </Flex>

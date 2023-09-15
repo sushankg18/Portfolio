@@ -28,7 +28,8 @@ import Projects from './Projects';
 
 const Home = () => {
   return (
-    <Box w={'100%'} h={['fit-content', '100%']} p={'10'}>
+    
+    <Box w={'100%'} h={['fit-content', '100%']} p={'10'} >
       <Flex
         justifyContent={'space-between'}
         h={['fit-content', 'fit-content']}
@@ -60,15 +61,15 @@ const Home = () => {
             alignItems={'center'}
             alignSelf={'center'}
           >
-            Hey I'm
+            Hey There ! I'm
             <Heading fontSize={['30', '50']}>Sushank Gautam</Heading>
           </Text>
           <Text fontSize={['', '', '', '20']} lineHeight={'160%'}>
             I'm currently a <strong>BCA 2nd year </strong> student with a
             passion for technology and coding. <strong>JAVA</strong> is my
             preferred programming language, although I am well-versed in other
-            programming languages such as <strong>C++, PYTHON , C#. </strong>
-            My experience extends to both areas including{' '}
+            programming languages such as <strong>C++, PYTHON. </strong>
+            My experience extends to both areas including
             <strong>WEB DEVELOPMENT and ANDROID DEVELOPMENT. </strong>
           </Text>
           <Button
@@ -85,8 +86,9 @@ const Home = () => {
 
       <Box
         height={['fit-content', '', 'fit-content', '100vh']}
-        p={['2', '', '14', '8']}
+        px={['2', '', '14', '8']}
         id="skills"
+        py={'20'}
         paddingBottom={['14', '0']}
       >
         <Flex justifyContent={'center'}>
@@ -94,6 +96,7 @@ const Home = () => {
             paddingBottom={['12', '10']}
             alignSelf={'center'}
             fontSize={['26', '38']}
+            color={'green'}
           >
             Some Of My Skills
           </Heading>

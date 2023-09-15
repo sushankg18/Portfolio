@@ -16,9 +16,9 @@ import { AiOutlineLink, AiFillGithub } from 'react-icons/ai';
 import img15 from '../assets/VideoHub.jpg';
 const Projects = () => {
   return (
-    <Box w={'full'} h={'fit-content'} py={'20'} id="projects">
+    <Box w={'full'} h={'fit-content'} py={'20'} id="projects" >
       <Flex justifyContent={'center'} pb={'10'}>
-        <Heading>FEW PROJECTS</Heading>
+        <Heading color={'green'}>FEW PROJECTS</Heading>
       </Flex>
 
       <Flex

@@ -45,13 +45,13 @@ const Footer = () => {
     <Box h={'fit-content'}>
       <Flex
         h={'full'}
-        direction={['column', 'row']}
+        direction={['column-reverse', 'row']}
         gap={['20', '0']}
         id="contact"
         paddingBottom={'5'}
       >
         <VStack w={'full'} {...styleItem} spacing={4}>
-          <Heading>Contact Me</Heading>
+          <Heading color={'green'} fontSize={['32','','22','32']}>Contact Me</Heading>
           <Text>Wanna talk with me? Just drop a message!</Text>
           <form action="">
             <Input
@@ -80,7 +80,7 @@ const Footer = () => {
         </VStack>
 
         <VStack w={'full'} {...styleItem}>
-          <Heading>Quick links</Heading>
+          <Heading color={'green'} fontSize={['32','','22','32']}>Quick links</Heading>
 
           <VStack gap={'5'} fontWeight={'semibold'} alignItems={'flex-start'}>
             <HashLink to={'/#home'}>
@@ -112,7 +112,7 @@ const Footer = () => {
         </VStack>
 
         <VStack w={'full'} {...styleItem}>
-          <Heading>Social Media</Heading>
+          <Heading color={'green'} fontSize={['32','','22','32']}>Social Media</Heading>
           <Box {...styleItem} gap={'5'}>
             <a href="https://github.com/sushankg18" target="_blank">
               <Flex gap={'2'} cursor={'pointer'}>
@@ -158,16 +158,14 @@ const Footer = () => {
         </VStack>
       </Flex>
       <Box w={'full'} {...styleItem} alignItems={'center'}>
-        <Image
+        <AiOutlineArrowUp
           className="goupBtn"
-          w={'14'}
-          border={'1px solid black'}
+          size={'48'}
           onClick={goUp}
-          borderRadius={'full'}
           cursor={'pointer'}
-          src={img16}
-        ></Image>
-        <Text fontWeight={'semibold'} >
+        />
+
+        <Text fontWeight={'semibold'} color={'teal.600'} fontSize={['9','16']}>
           Copyright ©2023 | All Rights Reserved | Sushank Gautam
         </Text>
       </Box>
