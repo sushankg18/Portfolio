@@ -2,16 +2,13 @@ import React from 'react';
 import {
   Box,
   Button,
-  Text,
   Flex,
   Heading,
   Drawer,
   DrawerBody,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
-  DrawerCloseButton,
   useDisclosure,
 } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
@@ -20,7 +17,6 @@ import { HashLink } from 'react-router-hash-link';
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [placement, setPlacement] = React.useState('right');
 
   const smallScreenNavStyling = {
     borderBottom: '1px solid white',
@@ -29,32 +25,52 @@ const Navbar = () => {
   };
 
   return (
-    <Box position={'sticky'} top={'0'} overflow={'hidden'}>
+    <Box
+      position={'sticky'}
+      boxShadow="0px 0px 10px rgba(0, 0, 0, 0.2)"
+      top={'0'}
+      overflow={'hidden'}
+      zIndex={9}
+    >
       <Flex
         w={'full'}
         height={'fit-content'}
-        bgColor={'blackAlpha.200'}
         py={'3'}
-        px={['2','','3', '10']}
+        px={['2', '', '3', '10']}
         justifyContent={'space-between'}
         alignItems={'center'}
         flexDirection={['row-reverse', 'unset']}
       >
-        <Heading color={'teal.500'} cursor={'pointer'} fontSize={['1.3rem','1.7rem','2rem', '3rem']}>
+        <Heading
+          color={'teal.500'}
+          cursor={'pointer'}
+          fontSize={['1.3rem', '1.7rem', '2rem', '3rem']}
+        >
           Sushank Gautam
         </Heading>
 
         <Flex
           gap={'10'}
           fontWeight={'bold'}
-          paddingRight={['','','10','20']}
+          paddingRight={['', '', '10', '20']}
           fontSize={'18'}
           display={['none', 'flex']}
         >
-          <Link to={'/'}>Home</Link>
-          <HashLink to={'/#about'}>About</HashLink>
-          <HashLink to={'/#skills'}>Skills</HashLink>
-          <HashLink to={'/#projects'}>Projects</HashLink>
+          <HashLink to={'/#home'} className="hover-link">
+            Home
+          </HashLink>
+          <HashLink to={'/#about'} className="hover-link">
+            About
+          </HashLink>
+          <HashLink to={'/#skills'} className="hover-link">
+            Skills
+          </HashLink>
+          <HashLink to={'/#projects'} className="hover-link">
+            Projects
+          </HashLink>
+          <HashLink to={'/#contact'} className="hover-link">
+            Contact
+          </HashLink>
         </Flex>
 
         <Button variant={'outline'} display={['flex', 'none']} onClick={onOpen}>
@@ -92,6 +108,9 @@ const Navbar = () => {
                 </HashLink>
                 <HashLink to={'/#projects'} style={smallScreenNavStyling}>
                   Projects
+                </HashLink>
+                <HashLink to={'/#contact'} style={smallScreenNavStyling}>
+                  Contact
                 </HashLink>
               </Flex>
             </DrawerBody>

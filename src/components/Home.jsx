@@ -6,6 +6,7 @@ import {
   Image,
   VStack,
   Button,
+  HStack,
 } from '@chakra-ui/react';
 import React from 'react';
 import img0 from '../assets/Picsart_23-06-16_13-04-01-011.jpg';
@@ -22,7 +23,7 @@ import img10 from '../assets/ChakraUi.svg';
 import img11 from '../assets/icons8-sass-avatar.svg';
 import img12 from '../assets/icons8-c (1).svg';
 import Footer from './Footer';
-import About from './About'
+import About from './About';
 import Projects from './Projects';
 
 const Home = () => {
@@ -32,6 +33,7 @@ const Home = () => {
         justifyContent={'space-between'}
         h={['fit-content', 'fit-content']}
         alignItems={'center'}
+        id='home'
         direction={['column', 'column']}
       >
         <Image
@@ -40,7 +42,6 @@ const Home = () => {
           h={['40', '', '48', '60']}
           borderRadius={['80px 50px 70px 10px', 'full']}
           transition={'all 0.4s'}
-          cursor={'pointer'}
           _hover={{
             boxShadow: '0px 0px 20px rgba(0, 0, 0, 1)',
           }}
@@ -62,7 +63,7 @@ const Home = () => {
             Hey I'm
             <Heading fontSize={['30', '50']}>Sushank Gautam</Heading>
           </Text>
-          <Text fontSize={['','','','20']} lineHeight={'160%'}>
+          <Text fontSize={['', '', '', '20']} lineHeight={'160%'}>
             I'm currently a <strong>BCA 2nd year </strong> student with a
             passion for technology and coding. <strong>JAVA</strong> is my
             preferred programming language, although I am well-versed in other
@@ -80,14 +81,12 @@ const Home = () => {
         </VStack>
       </Flex>
 
-      
-        <About />
-
+      <About />
 
       <Box
-        height={['fit-content','','fit-content', '100vh']}
-        p={['2','','14', '8']}
-        id="#skills"
+        height={['fit-content', '', 'fit-content', '100vh']}
+        p={['2', '', '14', '8']}
+        id="skills"
         paddingBottom={['14', '0']}
       >
         <Flex justifyContent={'center'}>
@@ -108,39 +107,39 @@ const Home = () => {
           fontWeight={'semibold'}
         >
           <VStack cursor={'pointer'}>
-            <Image src={img1} boxSize={['5rem', '8rem']}  />
+            <Image src={img1} boxSize={['5rem', '8rem']} />
             <Text>HTML</Text>
-          </VStack >
+          </VStack>
           <VStack cursor={'pointer'}>
-            <Image src={img2} boxSize={['5rem', '8rem']}  />
+            <Image src={img2} boxSize={['5rem', '8rem']} />
             <Text>CSS</Text>
           </VStack>
           <VStack cursor={'pointer'}>
-            <Image src={img3} boxSize={['5rem', '8rem']}  />
+            <Image src={img3} boxSize={['5rem', '8rem']} />
             <Text>JAVASCRIPT</Text>
           </VStack>
           <VStack cursor={'pointer'}>
-            <Image src={img4} boxSize={['5rem', '8rem']}  />
+            <Image src={img4} boxSize={['5rem', '8rem']} />
             <Text>TAILWIND</Text>
           </VStack>
           <VStack cursor={'pointer'}>
-            <Image src={img5} boxSize={['5rem', '8rem']}  />
+            <Image src={img5} boxSize={['5rem', '8rem']} />
             <Text>REACT JS</Text>
           </VStack>
           <VStack cursor={'pointer'}>
-            <Image src={img6} boxSize={['5rem', '8rem']}  />
+            <Image src={img6} boxSize={['5rem', '8rem']} />
             <Text>GIT</Text>
           </VStack>
           <VStack cursor={'pointer'}>
-            <Image src={img7} boxSize={['5rem', '8rem']}  />
+            <Image src={img7} boxSize={['5rem', '8rem']} />
             <Text>GITHUB</Text>
           </VStack>
           <VStack cursor={'pointer'}>
-            <Image src={img8} boxSize={['5rem', '8rem']}  />
+            <Image src={img8} boxSize={['5rem', '8rem']} />
             <Text>JAVA</Text>
           </VStack>
           <VStack cursor={'pointer'}>
-            <Image src={img9} boxSize={['5rem', '8rem']}  />
+            <Image src={img9} boxSize={['5rem', '8rem']} />
             <Text>C</Text>
           </VStack>
           <VStack cursor={'pointer'}>

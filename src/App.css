@@ -1,0 +1,30 @@
+*{
+    scroll-behavior: smooth;
+}
+.goupBtn {
+    animation: updown 1s infinite, all ease-in-out infinite;
+    transition: all .3s;
+}
+.goupBtn:hover{
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+.hover-link{
+    padding: 3px 0px;
+    transition: all 0.1s;
+}
+.hover-link:hover{
+    border-top: 3px solid orangered;
+}
+    
+
+@keyframes updown {
+    0% {
+        transform: translateY(10px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(10px);
+    }
+}
