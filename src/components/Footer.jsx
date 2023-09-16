@@ -95,9 +95,9 @@ const Footer = () => {
                 <AiOutlineHome /> Home
               </Flex>
             </HashLink>
-            <HashLink to={'/#about'}>
+            <HashLink to={'/#education'}>
               <Flex alignItems={'center'} gap={'5'} fontSize={'18'}>
-                <AiOutlineUser /> About
+                <AiOutlineUser /> Education
               </Flex>
             </HashLink>
             <HashLink to={'/#skills'}>
