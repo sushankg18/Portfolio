@@ -47,7 +47,8 @@ const Footer = () => {
       <Flex
         h={'full'}
         direction={['column-reverse', 'row-reverse','row-reverse','row']}
-        gap={['20', '0']}
+        justifyContent={['','space-between','space-evenly','']}
+        gap={['20','10','', '0']}
         id="contact"
         paddingBottom={'5'}
         flexWrap={['nowrap','wrap','wrap-reverse','nowrap']}
