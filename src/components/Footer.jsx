@@ -47,13 +47,13 @@ const Footer = () => {
       <Flex
         h={'full'}
         direction={['column-reverse', 'row-reverse','row-reverse','row']}
-        justifyContent={['','space-between','space-evenly','']}
+        flexWrap={['nowrap','wrap','wrap-reverse','nowrap']}
+        justifyContent={['','space-between','space-between','']}
         gap={['20','10','', '0']}
         id="contact"
         paddingBottom={'5'}
-        flexWrap={['nowrap','wrap','wrap-reverse','nowrap']}
       >
-        <VStack w={['','','full','full']} {...styleItem} spacing={4} >
+        <VStack w={['full','full','full','full']} {...styleItem} spacing={4} >
           <Heading color={'purple.600'} fontSize={['32', '', '22', '32']}>
             Contact Me
           </Heading>
@@ -86,7 +86,7 @@ const Footer = () => {
           </form>
         </VStack>
 
-        <VStack w={['','','50%','full']} {...styleItem} >
+        <VStack w={['','45%','45%','full']} {...styleItem} >
           <Heading color={'purple.600'} fontSize={['32', '', '22', '32']}>
             Quick links
           </Heading>
@@ -120,7 +120,7 @@ const Footer = () => {
           </VStack>
         </VStack>
 
-        <VStack w={['','','50%','full']} {...styleItem} >
+        <VStack w={['','45%','45%','full']} {...styleItem} >
           <Heading color={'purple.600'} fontSize={['32', '', '22', '32']}>
             Social Media
           </Heading>
