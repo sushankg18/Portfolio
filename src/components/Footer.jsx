@@ -6,9 +6,7 @@ import {
   Input,
   VStack,
   Text,
-  Image,
   Textarea,
-  HStack,
 } from '@chakra-ui/react';
 import React from 'react';
 import {
@@ -26,7 +24,6 @@ import {
   AiOutlineArrowUp,
 } from 'react-icons/ai';
 import { HashLink } from 'react-router-hash-link';
-import img16 from '../assets/arrow-up.svg';
 const Footer = () => {
   const styleItem = {
     display: 'flex',
@@ -42,7 +39,11 @@ const Footer = () => {
     window.scrollTo(0, 0);
   };
   return (
-    <Box h={'fit-content'}>
+    <Box
+      h={'fit-content'}
+      px={['5', '', '1', '10']}
+      paddingBottom={['3', '24', '', '3']}
+    >
       <Flex
         h={'full'}
         direction={['column-reverse', 'row']}
@@ -51,8 +52,12 @@ const Footer = () => {
         paddingBottom={'5'}
       >
         <VStack w={'full'} {...styleItem} spacing={4}>
-          <Heading color={'green'} fontSize={['32','','22','32']}>Contact Me</Heading>
-          <Text>Wanna talk with me? Just drop a message!</Text>
+          <Heading color={'purple.600'} fontSize={['32', '', '22', '32']}>
+            Contact Me
+          </Heading>
+          <Text alignSelf={'flex-start'}>
+            Wanna talk with me? Just drop a message!
+          </Text>
           <form action="">
             <Input
               {...inputStyling}
@@ -70,7 +75,7 @@ const Footer = () => {
             <Button
               mt={4}
               type={'submit'}
-              colorScheme="teal"
+              colorScheme="purple"
               variant={'outline'}
               gap={'5'}
             >
@@ -80,7 +85,9 @@ const Footer = () => {
         </VStack>
 
         <VStack w={'full'} {...styleItem}>
-          <Heading color={'green'} fontSize={['32','','22','32']}>Quick links</Heading>
+          <Heading color={'purple.600'} fontSize={['32', '', '22', '32']}>
+            Quick links
+          </Heading>
 
           <VStack gap={'5'} fontWeight={'semibold'} alignItems={'flex-start'}>
             <HashLink to={'/#home'}>
@@ -112,9 +119,15 @@ const Footer = () => {
         </VStack>
 
         <VStack w={'full'} {...styleItem}>
-          <Heading color={'green'} fontSize={['32','','22','32']}>Social Media</Heading>
+          <Heading color={'purple.600'} fontSize={['32', '', '22', '32']}>
+            Social Media
+          </Heading>
           <Box {...styleItem} gap={'5'}>
-            <a href="https://github.com/sushankg18" target="_blank">
+            <a
+              href="https://github.com/sushankg18"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Flex gap={'2'} cursor={'pointer'}>
                 <AiFillGithub size={'30'} />
                 <Text fontWeight={'semibold'}>Github</Text>
@@ -124,6 +137,7 @@ const Footer = () => {
             <a
               href="https://www.linkedin.com/in/sushank-gautam-a99685249/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <Flex gap={'2'} cursor={'pointer'}>
                 <AiFillLinkedin size={'30'} />
@@ -134,6 +148,7 @@ const Footer = () => {
             <a
               href="https://www.instagram.com/sushankk_gotnolife/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               <Flex gap={'2'} cursor={'pointer'}>
                 <AiFillInstagram size={'30'} />
@@ -141,14 +156,18 @@ const Footer = () => {
               </Flex>
             </a>
 
-            <a href="https://wa.me/+918368433001" target="_blank">
+            <a
+              href="https://wa.me/+918368433001"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Flex gap={'2'} cursor={'pointer'}>
                 <AiOutlineWhatsApp size={'30'} />
                 <Text fontWeight={'semibold'}>WhatsApp</Text>
               </Flex>
             </a>
 
-            <a href={'mailto:sushankg4@gmail.com'}>
+            <a href={'mailto:sushankg4@gmail.com'} rel="noopener noreferrer">
               <Flex gap={'2'} cursor={'pointer'}>
                 <AiOutlineMail size={'30'} />
                 <Text fontWeight={'semibold'}>Email</Text>
@@ -165,7 +184,12 @@ const Footer = () => {
           cursor={'pointer'}
         />
 
-        <Text fontWeight={'semibold'} color={'teal.600'} fontSize={['9','16']}>
+        <Text
+          fontWeight={'semibold'}
+          color={'purple.600'}
+          fontSize={['9', '14']}
+          letterSpacing={'widest'}
+        >
           Copyright ©2023 | All Rights Reserved | Sushank Gautam
         </Text>
       </Box>

@@ -10,28 +10,23 @@ import {
   DrawerOverlay,
   DrawerContent,
   useDisclosure,
-  useColorMode,
-  DrawerCloseButton
+  DrawerCloseButton,
 } from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
 import { BiMenu } from 'react-icons/bi';
 import { HashLink } from 'react-router-hash-link';
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { colorMode } = useColorMode();
 
   const smallScreenNavStyling = {
     padding: '2px 20px',
   };
-  const backgroundColor = colorMode === 'dark' ? 'gray.800' : 'white';
-
 
   return (
     <Box
       position={'sticky'}
       boxShadow="0px 0px 10px rgba(0, 0, 0, 0.2)"
-      backgroundColor={backgroundColor}
+      bgColor={'white'}
       top={'0'}
       overflow={'hidden'}
       zIndex={9}
@@ -40,24 +35,26 @@ const Navbar = () => {
         w={'full'}
         height={'fit-content'}
         py={'3'}
-        px={['2', '', '3', '10']}
-        justifyContent={'space-between'}
+        px={['2', '', '3', '5']}
+        justifyContent={['space-between', '', '', 'space-between']}
         alignItems={'center'}
         flexDirection={['row-reverse', 'unset']}
       >
-        <Heading
-          color={'teal.500'}
-          cursor={'pointer'}
-          fontSize={['1.3rem', '1.7rem', '1.7rem', '3rem']}
-        >
-          Sushank Gautam
-        </Heading>
+        <a href='https://sushankportfolio.vercel.app/'>
+          <Heading
+            color={'purple.600'}
+            cursor={'pointer'}
+            fontSize={['1.3rem', '1.7rem', '1.7rem', '3rem']}
+          >
+            Sushank Gautam
+          </Heading>
+        </a>
 
         <Flex
-          gap={['','','8','10']}
+          gap={['', '', '8', '10']}
           fontWeight={'bold'}
-          paddingRight={['', '', '10', '20']}
-          fontSize={['','','','18']}
+          paddingRight={['', '', '10', '10']}
+          fontSize={['', '', '', '18']}
           display={['none', 'flex']}
         >
           <HashLink to={'/#home'} className="hover-link">
@@ -100,21 +97,41 @@ const Navbar = () => {
                 alignItems={'center'}
                 gap={'3'}
                 fontWeight={'semibold'}
-                color={'teal.400'}
+                color={'purple.600'}
               >
-                <HashLink onClick={onClose} to={'/#home'} style={smallScreenNavStyling}>
+                <HashLink
+                  onClick={onClose}
+                  to={'/#home'}
+                  style={smallScreenNavStyling}
+                >
                   Home
                 </HashLink>
-                <HashLink onClick={onClose} to={'/#education'} style={smallScreenNavStyling}>
-                education
+                <HashLink
+                  onClick={onClose}
+                  to={'/#education'}
+                  style={smallScreenNavStyling}
+                >
+                  education
                 </HashLink>
-                <HashLink onClick={onClose} to={'/#skills'} style={smallScreenNavStyling}>
+                <HashLink
+                  onClick={onClose}
+                  to={'/#skills'}
+                  style={smallScreenNavStyling}
+                >
                   Skills
                 </HashLink>
-                <HashLink onClick={onClose} to={'/#projects'} style={smallScreenNavStyling}>
+                <HashLink
+                  onClick={onClose}
+                  to={'/#projects'}
+                  style={smallScreenNavStyling}
+                >
                   Projects
                 </HashLink>
-                <HashLink onClick={onClose} to={'/#contact'} style={smallScreenNavStyling}>
+                <HashLink
+                  onClick={onClose}
+                  to={'/#contact'}
+                  style={smallScreenNavStyling}
+                >
                   Contact
                 </HashLink>
               </Flex>

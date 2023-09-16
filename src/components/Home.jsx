@@ -6,10 +6,8 @@ import {
   Image,
   VStack,
   Button,
-  HStack,
 } from '@chakra-ui/react';
 import React from 'react';
-import img0 from '../assets/Picsart_23-06-16_13-04-01-011.jpg';
 import img1 from '../assets/icons8-html.svg';
 import img2 from '../assets/icons8-css3.svg';
 import img3 from '../assets/icons8-javascript.svg';
@@ -22,35 +20,34 @@ import img9 from '../assets/icons8-c.svg';
 import img10 from '../assets/ChakraUi.svg';
 import img11 from '../assets/icons8-sass-avatar.svg';
 import img12 from '../assets/icons8-c (1).svg';
-import Footer from './Footer';
-import About from './About';
+import About from './Education';
 import Projects from './Projects';
+import img20 from '../assets/education-section.png';
+import Footer from '../components/Footer'
 
 const Home = () => {
   return (
     
-    <Box w={'100%'} h={['fit-content', '100%']} p={'10'} >
+    <Box w={'100%'} h={['fit-content', '100%']} px={['5','10']} py={['0','0']}>
       <Flex
         justifyContent={'space-between'}
         h={['fit-content', 'fit-content']}
         alignItems={'center'}
         id='home'
         direction={['column', 'column']}
+        paddingTop={['14','20']}
       >
         <Image
-          src={img0}
-          w={['40', '', '48', '60']}
-          h={['40', '', '48', '60']}
+          src={img20}
+          w={'72'}
           borderRadius={['80px 50px 70px 10px', 'full']}
           transition={'all 0.4s'}
-          _hover={{
-            boxShadow: '0px 0px 20px rgba(0, 0, 0, 1)',
-          }}
+          boxShadow={'0px 0px 20px rgba(0, 0, 0, 1)'}
         />
         <VStack
           w={['full', '', 'full', '70%']}
           alignItems={'flex-start'}
-          spacing={'14'}
+          spacing={'10'}
           m={['10', '5']}
         >
           <Text
@@ -64,18 +61,17 @@ const Home = () => {
             Hey There ! I'm
             <Heading fontSize={['30', '50']}>Sushank Gautam</Heading>
           </Text>
-          <Text fontSize={['', '', '', '20']} lineHeight={'160%'}>
+          <Text fontSize={['', '', '', '18']} letterSpacing={'wider'} lineHeight={'160%'}>
             I'm currently a <strong>BCA 2nd year </strong> student with a
             passion for technology and coding. <strong>JAVA</strong> is my
             preferred programming language, although I am well-versed in other
-            programming languages such as <strong>C++, PYTHON. </strong>
-            My experience extends to both areas including
-            <strong>WEB DEVELOPMENT and ANDROID DEVELOPMENT. </strong>
+            programming languages such as <strong>C, C++, PYTHON. </strong>
+            My experience extends to both areas including <strong>WEB DEVELOPMENT and ANDROID DEVELOPMENT. </strong>
           </Text>
           <Button
-            colorScheme="teal"
+            colorScheme="purple"
             variant={'outline'}
-            alignSelf={['center', 'flex-end']}
+            alignSelf={['center', 'center']}
           >
             Download resume
           </Button>
@@ -85,18 +81,18 @@ const Home = () => {
       <About />
 
       <Box
-        height={['fit-content', '', 'fit-content', '100vh']}
+        height={['fit-content', '', 'fit-content', 'fit-content']}
         px={['2', '', '14', '8']}
         id="skills"
-        py={'20'}
-        paddingBottom={['14', '0']}
+        paddingTop={['20','']}
+        paddingBottom={['0', '5']}
       >
         <Flex justifyContent={'center'}>
           <Heading
             paddingBottom={['12', '10']}
             alignSelf={'center'}
             fontSize={['26', '38']}
-            color={'green'}
+            color={'purple.600'}
           >
             Some Of My Skills
           </Heading>
@@ -105,7 +101,7 @@ const Home = () => {
         <Flex
           gap={'12'}
           w={'100%'}
-          justifyContent={'space-evenly'}
+          justifyContent={['space-evenly','','space-evenly','stretch']}
           flexWrap={'wrap'}
           fontWeight={'semibold'}
         >

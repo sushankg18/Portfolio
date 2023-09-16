@@ -1,5 +1,5 @@
 *{
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; 
 }
 ::-webkit-scrollbar{
     width: 10px;
@@ -7,10 +7,10 @@
     transition: all .2s;
 }
 ::-webkit-scrollbar-track{
-    background: teal;
+    background: transparent;
 }
 ::-webkit-scrollbar-thumb{
-    background: orange;
+    background: #6B46C1;
     opacity: 0.5;
     border-radius: 20px;
 }
@@ -18,14 +18,14 @@
     background: orangered;
 }
 .goupBtn {
-    animation: updown 1s infinite, all ease-in-out infinite;
+    animation: updown 1.2s infinite, all ease-in-out infinite;
     transition: all .3s;
     padding: 5px;
     border: 1px solid rgb(101, 99, 99);
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    color: #008000;
+    color: #6B46C1;
 }
 .goupBtn:hover{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
@@ -35,18 +35,18 @@
     transition: all 0.1s;
 }
 .hover-link:hover{
-    border-top: 3px solid orangered;
+    border-top: 3px solid rgb(206, 64, 206);
 }
     
 
 @keyframes updown {
     0% {
-        transform: translateY(10px);
+        transform: translateY(15px);
     }
     50% {
         transform: translateY(0px);
     }
     100%{
-        transform: translateY(10px);
+        transform: translateY(15px);
     }
 }
