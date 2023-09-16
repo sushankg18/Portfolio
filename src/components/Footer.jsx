@@ -42,20 +42,21 @@ const Footer = () => {
     <Box
       h={'fit-content'}
       px={['5', '', '1', '10']}
-      paddingBottom={['3', '24', '', '3']}
+      paddingBottom={['3', '2', '', '3']}
     >
       <Flex
         h={'full'}
-        direction={['column-reverse', 'row']}
+        direction={['column-reverse', 'row-reverse','row-reverse','row']}
         gap={['20', '0']}
         id="contact"
         paddingBottom={'5'}
+        flexWrap={['nowrap','wrap','wrap-reverse','nowrap']}
       >
-        <VStack w={'full'} {...styleItem} spacing={4}>
+        <VStack w={['','','full','full']} {...styleItem} spacing={4} >
           <Heading color={'purple.600'} fontSize={['32', '', '22', '32']}>
             Contact Me
           </Heading>
-          <Text alignSelf={'flex-start'}>
+          <Text alignSelf={['','','center','flex-start']}>
             Wanna talk with me? Just drop a message!
           </Text>
           <form action="">
@@ -84,12 +85,12 @@ const Footer = () => {
           </form>
         </VStack>
 
-        <VStack w={'full'} {...styleItem}>
+        <VStack w={['','','50%','full']} {...styleItem} >
           <Heading color={'purple.600'} fontSize={['32', '', '22', '32']}>
             Quick links
           </Heading>
 
-          <VStack gap={'5'} fontWeight={'semibold'} alignItems={'flex-start'}>
+          <VStack gap={'5'} fontWeight={'semibold'} alignItems={'flex-start'} >
             <HashLink to={'/#home'}>
               <Flex alignItems={'center'} gap={'5'} fontSize={'18'}>
                 <AiOutlineHome /> Home
@@ -118,7 +119,7 @@ const Footer = () => {
           </VStack>
         </VStack>
 
-        <VStack w={'full'} {...styleItem}>
+        <VStack w={['','','50%','full']} {...styleItem} >
           <Heading color={'purple.600'} fontSize={['32', '', '22', '32']}>
             Social Media
           </Heading>
