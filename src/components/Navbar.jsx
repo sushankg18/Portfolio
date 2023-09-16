@@ -36,7 +36,7 @@ const Navbar = () => {
         height={'fit-content'}
         py={'3'}
         px={['2', '', '3', '5']}
-        justifyContent={['space-between', '', '', 'space-between']}
+        justifyContent={['space-between', '', 'space-between', 'space-between']}
         alignItems={'center'}
         flexDirection={['row-reverse', 'unset']}
       >
@@ -55,7 +55,7 @@ const Navbar = () => {
           fontWeight={'bold'}
           paddingRight={['', '', '10', '10']}
           fontSize={['', '', '', '18']}
-          display={['none', 'flex']}
+          display={['none','','none', 'flex']}
         >
           <HashLink to={'/#home'} className="hover-link">
             Home
@@ -74,7 +74,7 @@ const Navbar = () => {
           </HashLink>
         </Flex>
 
-        <Button variant={'outline'} display={['flex', 'none']} onClick={onOpen}>
+        <Button variant={'outline'} display={['flex','','', 'none']} onClick={onOpen}>
           <BiMenu size={'20'} />
         </Button>
 

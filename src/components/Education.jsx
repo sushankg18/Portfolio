@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/react';
 import React from 'react';
 import img17 from '../assets/college.png';
-import img18 from '../assets/kvslogo.jpg';
+import img18 from '../assets/kvs-logo.png';
 const About = () => {
 
   return (
@@ -43,8 +43,8 @@ const About = () => {
 
 
           <VStack w={'full'} p={['','3']} py={'3'} alignItems={['flex-start','','flex-start','flex-end']}>
-            <Flex direction={['column-reverse','','row-reverse','row']}>
-              <VStack alignItems={['flex-start','','flex-start','flex-end']}px={['0','5']} gap={['5','','','1']}>
+            <Flex direction={['column-reverse','row-reverse','row-reverse','row']}>
+              <VStack alignItems={['flex-start','flex-start','flex-start','flex-end']}px={['0','5']} gap={['5','','','1']}>
                 <Text fontWeight={'bold'} fontSize={['18','24']}>
                   Kendriya Vidyalaya Sangathan
                 </Text>
@@ -59,7 +59,7 @@ const About = () => {
                 </Text>
               </VStack>
               <HStack paddingBottom={['4','0']}>
-                <Image w={['16','','28','36']} src={img18} borderRadius={'full'} />
+                <Image w={['16','32']} src={img18} borderRadius={'full'} />
               </HStack>
             </Flex>
           </VStack>
