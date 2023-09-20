@@ -42,7 +42,10 @@ const Home = () => {
           w={['48','54','62','72']}
           borderRadius={['80px 50px 70px 10px', 'full']}
           transition={'all 0.4s'}
-          boxShadow={'0px 0px 20px rgba(0, 0, 0, 1)'}
+          boxShadow={['0px 0px 20px rgba(0, 0, 0, 1)','none']}
+          _hover={{
+            boxShadow : '0px 0px 20px rgba(0, 0, 0, 1)'
+          }}
         />
         <VStack
           w={['full', '', 'full', '70%']}
