@@ -22,7 +22,7 @@ import img11 from '../assets/icons8-sass-avatar.svg';
 import img12 from '../assets/icons8-c (1).svg';
 import About from './Education';
 import Projects from './Projects';
-import img20 from '../assets/education-section.png';
+import img20 from '../assets/profile-pic (2).png';
 import Footer from '../components/Footer'
 
 const Home = () => {
@@ -39,7 +39,7 @@ const Home = () => {
       >
         <Image
           src={img20}
-          w={'72'}
+          w={['48','54','62','72']}
           borderRadius={['80px 50px 70px 10px', 'full']}
           transition={'all 0.4s'}
           boxShadow={'0px 0px 20px rgba(0, 0, 0, 1)'}

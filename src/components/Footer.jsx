@@ -11,18 +11,16 @@ import {
 import React from 'react';
 import {
   AiFillLinkedin,
-  AiFillGithub,
   AiOutlineSend,
+  AiOutlineGithub,
   AiFillInstagram,
-  AiOutlineWhatsApp,
-  AiOutlineMail,
-  AiOutlineHome,
-  AiOutlineUser,
-  AiFillProject,
-  AiFillContacts,
-  AiOutlineCode,
+  AiFillMail,
+  AiFillHome,
   AiOutlineArrowUp,
+  AiFillPhone,
 } from 'react-icons/ai';
+import { FaUniversity, FaProjectDiagram, FaCode } from 'react-icons/fa';
+import { IoLogoWhatsapp } from 'react-icons/io';
 import { HashLink } from 'react-router-hash-link';
 const Footer = () => {
   const styleItem = {
@@ -46,18 +44,18 @@ const Footer = () => {
     >
       <Flex
         h={'full'}
-        direction={['column-reverse', 'row-reverse','row-reverse','row']}
-        flexWrap={['nowrap','wrap','wrap-reverse','nowrap']}
-        justifyContent={['','space-between','space-between','']}
-        gap={['20','10','', '0']}
+        direction={['column-reverse', 'row-reverse', 'row-reverse', 'row']}
+        flexWrap={['nowrap', 'wrap', 'wrap-reverse', 'nowrap']}
+        justifyContent={['', 'space-between', 'space-between', '']}
+        gap={['20', '10', '', '0']}
         id="contact"
         paddingBottom={'5'}
       >
-        <VStack w={['full','full','full','full']} {...styleItem} spacing={4} >
+        <VStack w={['full', 'full', 'full', 'full']} {...styleItem} spacing={4}>
           <Heading color={'purple.600'} fontSize={['32', '', '22', '32']}>
             Contact Me
           </Heading>
-          <Text alignSelf={['','','center','flex-start']}>
+          <Text alignSelf={['', '', 'center', 'flex-start']}>
             Wanna talk with me? Just drop a message!
           </Text>
           <form action="">
@@ -86,41 +84,42 @@ const Footer = () => {
           </form>
         </VStack>
 
-        <VStack w={['','45%','45%','full']} {...styleItem} >
+        <VStack w={['', '45%', '45%', 'full']} {...styleItem}>
           <Heading color={'purple.600'} fontSize={['32', '', '22', '32']}>
             Quick links
           </Heading>
-
-          <VStack gap={'5'} fontWeight={'semibold'} alignItems={'flex-start'} >
-            <HashLink to={'/#home'}>
-              <Flex alignItems={'center'} gap={'5'} fontSize={'18'}>
-                <AiOutlineHome /> Home
-              </Flex>
-            </HashLink>
-            <HashLink to={'/#education'}>
-              <Flex alignItems={'center'} gap={'5'} fontSize={'18'}>
-                <AiOutlineUser /> Education
-              </Flex>
-            </HashLink>
-            <HashLink to={'/#skills'}>
-              <Flex alignItems={'center'} gap={'5'} fontSize={'18'}>
-                <AiOutlineCode /> Skills
-              </Flex>
-            </HashLink>
-            <HashLink to={'/#projects'}>
-              <Flex alignItems={'center'} gap={'5'} fontSize={'18'}>
-                <AiFillProject /> Projects
-              </Flex>
-            </HashLink>
-            <HashLink to={'/#contact'}>
-              <Flex alignItems={'center'} gap={'5'} fontSize={'18'}>
-                <AiFillContacts /> Contact
-              </Flex>
-            </HashLink>
-          </VStack>
+          <Box {...styleItem} gap={'5'}>
+            <VStack gap={'5'} fontWeight={'semibold'} alignItems={'flex-start'}>
+              <HashLink to={'/#home'}>
+                <Flex alignItems={'center'} gap={'5'} fontSize={'18'}>
+                  <AiFillHome /> Home
+                </Flex>
+              </HashLink>
+              <HashLink to={'/#education'}>
+                <Flex alignItems={'center'} gap={'5'} fontSize={'18'}>
+                  <FaUniversity /> Education
+                </Flex>
+              </HashLink>
+              <HashLink to={'/#skills'}>
+                <Flex alignItems={'center'} gap={'5'} fontSize={'18'}>
+                  <FaCode /> Skills
+                </Flex>
+              </HashLink>
+              <HashLink to={'/#projects'}>
+                <Flex alignItems={'center'} gap={'5'} fontSize={'18'}>
+                  <FaProjectDiagram /> Projects
+                </Flex>
+              </HashLink>
+              <HashLink to={'/#contact'}>
+                <Flex alignItems={'center'} gap={'5'} fontSize={'18'}>
+                  <AiFillPhone /> Contact
+                </Flex>
+              </HashLink>
+            </VStack>
+          </Box>
         </VStack>
 
-        <VStack w={['','45%','45%','full']} {...styleItem} >
+        <VStack w={['', '45%', '45%', 'full']} {...styleItem}>
           <Heading color={'purple.600'} fontSize={['32', '', '22', '32']}>
             Social Media
           </Heading>
@@ -131,7 +130,7 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <Flex gap={'2'} cursor={'pointer'}>
-                <AiFillGithub size={'30'} />
+                <AiOutlineGithub size={'30'} />
                 <Text fontWeight={'semibold'}>Github</Text>
               </Flex>
             </a>
@@ -164,14 +163,14 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <Flex gap={'2'} cursor={'pointer'}>
-                <AiOutlineWhatsApp size={'30'} />
+                <IoLogoWhatsapp size={'30'} />
                 <Text fontWeight={'semibold'}>WhatsApp</Text>
               </Flex>
             </a>
 
             <a href={'mailto:sushankg4@gmail.com'} rel="noopener noreferrer">
               <Flex gap={'2'} cursor={'pointer'}>
-                <AiOutlineMail size={'30'} />
+                <AiFillMail size={'30'} />
                 <Text fontWeight={'semibold'}>Email</Text>
               </Flex>
             </a>
