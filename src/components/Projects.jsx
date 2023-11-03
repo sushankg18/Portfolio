@@ -11,13 +11,13 @@ import {
 import React from 'react';
 import portfolio from '../assets/portfolio.jpg';
 import img14 from '../assets/todo.jpg';
-import instaClone from '../assets/InstaClone.jpg';
+import Enterntube from '../assets/4905784.jpg';
 import Elearning from '../assets/Elearning.jpg';
 import filmix from '../assets/Filmix.jpg';
+import VideoHub from '../assets/VideoHub.jpg'
 import console from '../assets/console.jpg';
 import { AiOutlineLink, AiFillGithub } from 'react-icons/ai';
 import { FaProjectDiagram } from 'react-icons/fa';
-import {FiPhoneCall} from 'react-icons/fi'
 const Projects = () => {
   return (
     <Box w={'full'} h={'fit-content'} py={'20'} id="projects">
@@ -86,7 +86,51 @@ const Projects = () => {
           </VStack>
         </Box>
 
-        
+        <Box
+          w={['full', '', '20rem', '25rem']}
+          h={'fit-content'}
+          py={'4'}
+          transition={'all 0.5s'}
+          _hover={{
+            boxShadow: '0px 0px 12px rgba(0, 0, 0, 0.7)',
+          }}
+        >
+          <VStack>
+            <Image w={'52'} src={VideoHub} cursor={'pointer'}></Image>
+            <HStack>
+              <a
+                href="https://github.com/sushankg18/VideoHub"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  variant={'outline'}
+                  cursor={'pointer'}
+                  colorScheme="purple"
+                >
+                  <AiFillGithub size={'24'} />
+                </Button>
+              </a>
+              <a
+                href="https://video-hub-lovat.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  variant={'outline'}
+                  colorScheme="purple"
+                  cursor={'pointer'}
+                >
+                  <AiOutlineLink size={'24'} cursor={'pointer'} />
+                </Button>
+              </a>
+            </HStack>
+            <Text fontWeight={'semibold'} fontSize={'18'} py={'2'}>
+              VideoHub
+            </Text>
+            <Text>Technologies : React js, Chakra UI</Text>
+          </VStack>
+        </Box>
 
         <Box
           w={['full', '', '20rem', '25rem']}
@@ -128,31 +172,43 @@ const Projects = () => {
           py={'4'}
           transition={'all 0.5s'}
           _hover={{
-            boxShadow: '0px 0px 12px rgba(0, 0, 0, 0.5)',
+            boxShadow: '0px 0px 12px rgba(0, 0, 0, 0.7)',
           }}
         >
           <VStack>
-            <Image w={'52'} src={instaClone} cursor={'pointer'}></Image>
+            <Image w={'80'} src={Enterntube} cursor={'pointer'}></Image>
             <HStack>
-              <Button
-                variant={'outline'}
-                cursor={'pointer'}
-                colorScheme="purple"
+              <a
+                href="https://github.com/sushankg18/EnternTube"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <AiFillGithub size={'28'} />
-              </Button>
-              <Button
-                colorScheme="purple"
-                variant={'outline'}
-                cursor={'pointer'}
+                <Button
+                  variant={'outline'}
+                  cursor={'pointer'}
+                  colorScheme="purple"
+                >
+                  <AiFillGithub size={'24'} />
+                </Button>
+              </a>
+              <a
+                href="https://entern-tube.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <AiOutlineLink size={'28'} cursor={'pointer'} />
-              </Button>
+                <Button
+                  variant={'outline'}
+                  colorScheme="purple"
+                  cursor={'pointer'}
+                >
+                  <AiOutlineLink size={'24'} cursor={'pointer'} />
+                </Button>
+              </a>
             </HStack>
-            <Text fontWeight={'semibold'} fontSize={'18'}>
-              Instagram Clone (Full Fleged)
+            <Text fontWeight={'semibold'} fontSize={'18'} py={'2'}>
+              EnternTube
             </Text>
-            <Text>Technologies : MERN Stack</Text>
+            <Text>Technologies : HTML and CSS</Text>
           </VStack>
         </Box>
 
