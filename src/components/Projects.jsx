@@ -86,39 +86,7 @@ const Projects = () => {
           </VStack>
         </Box>
 
-        <Box
-          w={['full', '', '20rem', '25rem']}
-          h={'fit-content'}
-          py={'4'}
-          transition={'all 0.5s'}
-          _hover={{
-            boxShadow: '0px 0px 12px rgba(0, 0, 0, 0.5)',
-          }}
-        >
-          <VStack>
-            <Image w={'52'} src={filmix} cursor={'pointer'}></Image>
-            <HStack>
-              <Button
-                variant={'outline'}
-                cursor={'pointer'}
-                colorScheme="purple"
-              >
-                <AiFillGithub size={'28'} />
-              </Button>
-              <Button
-                variant={'outline'}
-                colorScheme="purple"
-                cursor={'pointer'}
-              >
-                <AiOutlineLink size={'28'} cursor={'pointer'} />
-              </Button>
-            </HStack>
-            <Text fontWeight={'semibold'} fontSize={'18'} py={'2'}>
-              Filmix (World Wide Movies)
-            </Text>
-            <Text>Technologies : React js, Redux, TDMB Api</Text>
-          </VStack>
-        </Box>
+        
 
         <Box
           w={['full', '', '20rem', '25rem']}

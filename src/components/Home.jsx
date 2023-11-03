@@ -128,9 +128,14 @@ const Home = () => {
             <Image src={img5} boxSize={['5rem', '8rem']} />
             <Text>REACT JS</Text>
           </VStack>
+          
           <VStack cursor={'pointer'}>
-            <Image src={img6} boxSize={['5rem', '8rem']} />
-            <Text>GIT</Text>
+            <Image src={img10} boxSize={['5rem', '8rem']} />
+            <Text>CHAKRA UI</Text>
+          </VStack>
+          <VStack cursor={'pointer'}>
+            <Image src={img11} boxSize={['5rem', '8rem']} />
+            <Text>SASS</Text>
           </VStack>
           <VStack cursor={'pointer'}>
             <Image src={img7} boxSize={['5rem', '8rem']} />
@@ -143,14 +148,6 @@ const Home = () => {
           <VStack cursor={'pointer'}>
             <Image src={img9} boxSize={['5rem', '8rem']} />
             <Text>C</Text>
-          </VStack>
-          <VStack cursor={'pointer'}>
-            <Image src={img10} boxSize={['5rem', '8rem']} />
-            <Text>CHAKRA UI</Text>
-          </VStack>
-          <VStack cursor={'pointer'}>
-            <Image src={img11} boxSize={['5rem', '8rem']} />
-            <Text>SASS</Text>
           </VStack>
           <VStack cursor={'pointer'}>
             <Image src={img12} boxSize={['5rem', '8rem']} />
