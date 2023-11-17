@@ -80,7 +80,7 @@ const Projects = () => {
               </a>
             </HStack>
             <Text fontWeight={'semibold'} fontSize={'18'} py={'2'}>
-              Portfolio using REACT
+                Personal Portfolio
             </Text>
             <Text>Technologies : React js, Chakra UI</Text>
           </VStack>
@@ -138,31 +138,43 @@ const Projects = () => {
           py={'4'}
           transition={'all 0.5s'}
           _hover={{
-            boxShadow: '0px 0px 12px rgba(0, 0, 0, 0.5)',
+            boxShadow: '0px 0px 12px rgba(0, 0, 0, 0.7)',
           }}
         >
           <VStack>
             <Image w={'52'} src={console} cursor={'pointer'}></Image>
             <HStack>
-              <Button
-                variant={'outline'}
-                cursor={'pointer'}
-                colorScheme="purple"
+              <a
+                href="https://github.com/sushankg18/console-launcher"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <AiFillGithub size={'28'} />
-              </Button>
-              <Button
-                variant={'outline'}
-                colorScheme="purple"
-                cursor={'pointer'}
+                <Button
+                  variant={'outline'}
+                  cursor={'pointer'}
+                  colorScheme="purple"
+                >
+                  <AiFillGithub size={'24'} />
+                </Button>
+              </a>
+              <a
+                href="https://consolelauncher.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <AiOutlineLink size={'28'} cursor={'pointer'} />
-              </Button>
+                <Button
+                  variant={'outline'}
+                  colorScheme="purple"
+                  cursor={'pointer'}
+                >
+                  <AiOutlineLink size={'24'} cursor={'pointer'} />
+                </Button>
+              </a>
             </HStack>
             <Text fontWeight={'semibold'} fontSize={'18'} py={'2'}>
-              Console Launcher (Gaming Platform)
+                Console Launcher
             </Text>
-            <Text>Technologies : React js, Redux, TDMB Api</Text>
+            <Text>Technologies : HTML and CSS</Text>
           </VStack>
         </Box>
 
