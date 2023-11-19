@@ -11,10 +11,9 @@ import {
 import React from 'react';
 import portfolio from '../assets/portfolio.jpg';
 import img14 from '../assets/todo.jpg';
-import Enterntube from '../assets/4905784.jpg';
+import instaClone from '../assets/InstaClone.jpg';
 import Elearning from '../assets/Elearning.jpg';
-import filmix from '../assets/Filmix.jpg';
-import VideoHub from '../assets/VideoHub.jpg'
+import crypto from '../assets/crypto.jpg';
 import console from '../assets/console.jpg';
 import { AiOutlineLink, AiFillGithub } from 'react-icons/ai';
 import { FaProjectDiagram } from 'react-icons/fa';
@@ -29,7 +28,7 @@ const Projects = () => {
           alignItems={'center'}
           gap={'5'}
         >
-          Few Projects <FaProjectDiagram /> 
+          Few Projects <FaProjectDiagram />
         </Heading>
       </Flex>
 
@@ -40,6 +39,54 @@ const Projects = () => {
         justifyContent={'space-evenly'}
         gap={['5', '']}
       >
+        <Box
+          w={['full', '', '20rem', '25rem']}
+          h={'fit-content'}
+          py={'4'}
+          transition={'all 0.5s'}
+          _hover={{
+            boxShadow: '0px 0px 12px rgba(0, 0, 0, 0.7)',
+          }}
+        >
+          <VStack>
+            <Image w={'52'} src={crypto} cursor={'pointer'}></Image>
+            <HStack>
+              <a
+                href="https://github.com/sushankg18/crypto-Jugad"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  variant={'outline'}
+                  cursor={'pointer'}
+                  colorScheme="purple"
+                >
+                  <AiFillGithub size={'24'} />
+                </Button>
+              </a>
+              <a
+                href="https://cryptojugadind.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  variant={'outline'}
+                  colorScheme="purple"
+                  cursor={'pointer'}
+                >
+                  <AiOutlineLink size={'24'} cursor={'pointer'} />
+                </Button>
+              </a>
+            </HStack>
+            <Text fontWeight={'bold'} fontSize={'18'} py={'2'}>
+              CryptoJugad (cryptoCurrency)
+            </Text>
+            <Text fontWeight={'semibold'}>
+              Technologies : React js, Chakra UI, Chart JS
+            </Text>
+          </VStack>
+        </Box>
+
         <Box
           w={['full', '', '20rem', '25rem']}
           h={'fit-content'}
@@ -79,10 +126,12 @@ const Projects = () => {
                 </Button>
               </a>
             </HStack>
-            <Text fontWeight={'semibold'} fontSize={'18'} py={'2'}>
-                Personal Portfolio
+            <Text fontWeight={'bold'} fontSize={'18'} py={'2'}>
+              Portfolio
             </Text>
-            <Text>Technologies : React js, Chakra UI</Text>
+            <Text fontWeight={'semibold'}>
+              Technologies : React js, Chakra UI
+            </Text>
           </VStack>
         </Box>
 
@@ -92,14 +141,14 @@ const Projects = () => {
           py={'4'}
           transition={'all 0.5s'}
           _hover={{
-            boxShadow: '0px 0px 12px rgba(0, 0, 0, 0.7)',
+            boxShadow: '0px 0px 12px rgba(0, 0, 0, 0.5)',
           }}
         >
           <VStack>
-            <Image w={'52'} src={VideoHub} cursor={'pointer'}></Image>
+            <Image w={'52'} src={instaClone} cursor={'pointer'}></Image>
             <HStack>
-              <a
-                href="https://github.com/sushankg18/VideoHub"
+            <a
+                href="https://github.com/sushankg18/InstaChat"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -112,7 +161,7 @@ const Projects = () => {
                 </Button>
               </a>
               <a
-                href="https://video-hub-lovat.vercel.app/"
+                href="https://instachatind.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -125,10 +174,10 @@ const Projects = () => {
                 </Button>
               </a>
             </HStack>
-            <Text fontWeight={'semibold'} fontSize={'18'} py={'2'}>
-              VideoHub
+            <Text fontWeight={'bold'} fontSize={'18'}>
+              InstaChat 
             </Text>
-            <Text>Technologies : React js, Chakra UI</Text>
+            <Text fontWeight={'semibold'}>Technologies : HTML, CSS, JAVASCRIPT</Text>
           </VStack>
         </Box>
 
@@ -138,13 +187,13 @@ const Projects = () => {
           py={'4'}
           transition={'all 0.5s'}
           _hover={{
-            boxShadow: '0px 0px 12px rgba(0, 0, 0, 0.7)',
+            boxShadow: '0px 0px 12px rgba(0, 0, 0, 0.5)',
           }}
         >
           <VStack>
             <Image w={'52'} src={console} cursor={'pointer'}></Image>
             <HStack>
-              <a
+            <a
                 href="https://github.com/sushankg18/console-launcher"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -158,7 +207,7 @@ const Projects = () => {
                 </Button>
               </a>
               <a
-                href="https://consolelauncher.vercel.app/"
+                href="https://console-launcher.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -171,56 +220,12 @@ const Projects = () => {
                 </Button>
               </a>
             </HStack>
-            <Text fontWeight={'semibold'} fontSize={'18'} py={'2'}>
-                Console Launcher
+            <Text fontWeight={'bold'} fontSize={'18'} py={'2'}>
+              Console Launcher (Gaming Platform)
             </Text>
-            <Text>Technologies : HTML and CSS</Text>
-          </VStack>
-        </Box>
-
-        <Box
-          w={['full', '', '20rem', '25rem']}
-          h={'fit-content'}
-          py={'4'}
-          transition={'all 0.5s'}
-          _hover={{
-            boxShadow: '0px 0px 12px rgba(0, 0, 0, 0.7)',
-          }}
-        >
-          <VStack>
-            <Image w={'80'} src={Enterntube} cursor={'pointer'}></Image>
-            <HStack>
-              <a
-                href="https://github.com/sushankg18/EnternTube"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  variant={'outline'}
-                  cursor={'pointer'}
-                  colorScheme="purple"
-                >
-                  <AiFillGithub size={'24'} />
-                </Button>
-              </a>
-              <a
-                href="https://entern-tube.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button
-                  variant={'outline'}
-                  colorScheme="purple"
-                  cursor={'pointer'}
-                >
-                  <AiOutlineLink size={'24'} cursor={'pointer'} />
-                </Button>
-              </a>
-            </HStack>
-            <Text fontWeight={'semibold'} fontSize={'18'} py={'2'}>
-              EnternTube
+            <Text fontWeight={'semibold'}>
+              Technologies : React js, Redux, TDMB Api
             </Text>
-            <Text>Technologies : HTML and CSS</Text>
           </VStack>
         </Box>
 
@@ -251,10 +256,10 @@ const Projects = () => {
                 <AiOutlineLink size={'28'} cursor={'pointer'} />
               </Button>
             </HStack>
-            <Text fontWeight={'semibold'} fontSize={'18'}>
+            <Text fontWeight={'bold'} fontSize={'18'}>
               Edu Explorer (E-learning platform)
             </Text>
-            <Text>Technologies : React js, SASS, </Text>
+            <Text fontWeight={'semibold'}>Technologies : React js, SASS, </Text>
           </VStack>
         </Box>
 
@@ -285,12 +290,62 @@ const Projects = () => {
                 <AiOutlineLink size={'28'} cursor={'pointer'} />
               </Button>
             </HStack>
-            <Text fontWeight={'semibold'} fontSize={'18'}>
+            <Text fontWeight={'bold'} fontSize={'18'}>
               To Do Application
             </Text>
-            <Text>Technologies : HTML, CSS, JAVASCRIPT</Text>
+            <Text fontWeight={'semibold'}>
+              Technologies : HTML, CSS, JAVASCRIPT
+            </Text>
           </VStack>
         </Box>
+
+        <Box
+          w={['full', '', '20rem', '25rem']}
+          h={'fit-content'}
+          py={'4'}
+          transition={'all 0.5s'}
+          _hover={{
+            boxShadow: '0px 0px 12px rgba(0, 0, 0, 0.5)',
+          }}
+        >
+          <VStack>
+            <Image w={'52'} src={instaClone} cursor={'pointer'}></Image>
+            <HStack>
+            <a
+                href="https://github.com/sushankg18/VideoHub"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  variant={'outline'}
+                  cursor={'pointer'}
+                  colorScheme="purple"
+                >
+                  <AiFillGithub size={'24'} />
+                </Button>
+              </a>
+              <a
+                href="https://video-hub-lovat.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  variant={'outline'}
+                  colorScheme="purple"
+                  cursor={'pointer'}
+                >
+                  <AiOutlineLink size={'24'} cursor={'pointer'} />
+                </Button>
+              </a>
+            </HStack>
+            <Text fontWeight={'bold'} fontSize={'18'}>
+              Practice Website
+            </Text>
+            <Text fontWeight={'semibold'}>Technologies : React Js, Chakra Ui</Text>
+          </VStack>
+        </Box>
+
+
       </Flex>
     </Box>
   );

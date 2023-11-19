@@ -36,7 +36,7 @@
     transition: all 0.1s;
 }
 .hover-link:hover{
-    border-top: 3px solid rgb(206, 64, 206);
+    border-top: 2px solid rgb(206, 64, 206);
 }
     
 

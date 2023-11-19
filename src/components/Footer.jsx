@@ -3,6 +3,7 @@ import {
   Button,
   Flex,
   Heading,
+  HStack,
   Input,
   VStack,
   Text,
@@ -36,6 +37,17 @@ const Footer = () => {
   const goUp = () => {
     window.scrollTo(0, 0);
   };
+  const viewSend = e => {
+    const inputText = document.getElementById('inputText');
+    const inputText2 = document.getElementById('inputText2');
+    const sendBtn = document.getElementById('sendBtn');
+    sendBtn.style.display = 'block';
+    console.log('Form submitted');
+    e.preventDefault();
+    inputText.value = '';
+    inputText2.value = '';
+  };
+
   return (
     <Box
       h={'fit-content'}
@@ -64,23 +76,31 @@ const Footer = () => {
               type={'email'}
               required
               placeholder="Enter Your Email"
+              id="inputText"
             />
             <Textarea
               {...inputStyling}
               mt={4}
               rows={4}
+              id="inputText2"
               required
               placeholder="Enter message here"
             />
-            <Button
-              mt={4}
-              type={'submit'}
-              colorScheme="purple"
-              variant={'outline'}
-              gap={'5'}
-            >
-              Send <AiOutlineSend />
-            </Button>
+            <HStack gap={'10'}>
+              <Button
+                mt={4}
+                type={'submit'}
+                colorScheme="purple"
+                variant={'outline'}
+                gap={'8'}
+                onClick={viewSend}
+              >
+                Send <AiOutlineSend />
+              </Button>
+              <p id="sendBtn" style={{ display: 'none' }}>
+                Sending....
+              </p>
+            </HStack>
           </form>
         </VStack>
 

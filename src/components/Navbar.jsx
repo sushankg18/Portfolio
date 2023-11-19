@@ -29,7 +29,7 @@ const Navbar = () => {
       bgColor={'white'}
       top={'0'}
       overflow={'hidden'}
-      zIndex={9}
+      zIndex={9}fontFamily={'Josefin Sans'}
     >
       <Flex
         w={'full'}
@@ -40,7 +40,6 @@ const Navbar = () => {
         alignItems={'center'}
         flexDirection={['row-reverse', 'unset']}
       >
-        <a href='https://sushankportfolio.vercel.app/'>
           <Heading
             color={'purple.600'}
             cursor={'pointer'}
@@ -48,7 +47,6 @@ const Navbar = () => {
           >
             Sushank Gautam
           </Heading>
-        </a>
 
         <Flex
           gap={['', '', '8', '10']}
