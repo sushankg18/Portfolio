@@ -51,3 +51,13 @@
         transform: translateY(15px);
     }
 }
+.setting-icon{
+    animation: rotation 2s infinite ease-in;
+    color: rgb(178, 0, 178);
+    cursor: pointer;
+}
+@keyframes rotation {
+    0%{
+        transform: rotate(360deg);
+    }
+}

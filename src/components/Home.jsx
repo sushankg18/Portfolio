@@ -41,6 +41,8 @@ const Home = () => {
         direction={['column', 'column']}
         paddingTop={['14', '20']}
       >
+
+
         <Image
           src={me}
           w={['48', '54', '62', '']}

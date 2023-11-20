@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Box,
   Button,
@@ -6,17 +6,26 @@ import {
   Heading,
   Drawer,
   DrawerBody,
-  DrawerHeader,
   DrawerOverlay,
   DrawerContent,
   useDisclosure,
   DrawerCloseButton,
 } from '@chakra-ui/react';
 import { BiMenu } from 'react-icons/bi';
+import { IoIosSettings } from 'react-icons/io';
 import { HashLink } from 'react-router-hash-link';
+import Temperature from './Temperature';
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [tempcomp, setTempComp] = useState(false);
+ 
+  const openTempComp = ()=>{
+      setTempComp(true)
+  }
+  const closeTempComp = ()=>{
+    setTempComp(false)
+}
 
   const smallScreenNavStyling = {
     padding: '2px 20px',
@@ -29,7 +38,8 @@ const Navbar = () => {
       bgColor={'white'}
       top={'0'}
       overflow={'hidden'}
-      zIndex={9}fontFamily={'Josefin Sans'}
+      zIndex={9}
+      fontFamily={'Josefin Sans'}
     >
       <Flex
         w={'full'}
@@ -40,20 +50,20 @@ const Navbar = () => {
         alignItems={'center'}
         flexDirection={['row-reverse', 'unset']}
       >
-          <Heading
-            color={'purple.600'}
-            cursor={'pointer'}
-            fontSize={['1.3rem', '1.7rem', '1.7rem', '3rem']}
-          >
-            Sushank Gautam
-          </Heading>
+        <Heading
+          color={'purple.600'}
+          cursor={'pointer'}
+          fontSize={['1.3rem', '1.7rem', '1.7rem', '3rem']}
+        >
+          Sushank Gautam
+        </Heading>
 
         <Flex
           gap={['', '', '8', '10']}
           fontWeight={'bold'}
           paddingRight={['', '', '10', '10']}
           fontSize={['', '', '', '18']}
-          display={['none','','none', 'flex']}
+          display={['none', '', 'none', 'flex']}
         >
           <HashLink to={'/#home'} className="hover-link">
             Home
@@ -70,23 +80,21 @@ const Navbar = () => {
           <HashLink to={'/#contact'} className="hover-link">
             Contact
           </HashLink>
+
+          <IoIosSettings fontSize={'xx-large'} className="setting-icon" onClick={openTempComp} />
         </Flex>
 
-        <Button variant={'outline'} display={['flex','','', 'none']} onClick={onOpen}>
+        <Button
+          variant={'outline'}
+          display={['flex', '', '', 'none']}
+          onClick={onOpen}
+        >
           <BiMenu size={'20'} />
         </Button>
 
         <Drawer placement={'top'} onClose={onClose} isOpen={isOpen}>
           <DrawerOverlay />
           <DrawerContent>
-            <DrawerHeader
-              borderBottomWidth="1px"
-              alignSelf={'center'}
-              fontWeight={'bold'}
-              fontSize={'24'}
-            >
-              CHECK
-            </DrawerHeader>
             <DrawerCloseButton />
             <DrawerBody>
               <Flex
@@ -132,10 +140,14 @@ const Navbar = () => {
                 >
                   Contact
                 </HashLink>
+                <IoIosSettings fontSize={'xx-large'} className="setting-icon" onClick={openTempComp} />
               </Flex>
             </DrawerBody>
           </DrawerContent>
         </Drawer>
+
+        {tempcomp && <Temperature onClose={closeTempComp}/>}
+
       </Flex>
     </Box>
   );
