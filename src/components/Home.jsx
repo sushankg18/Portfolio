@@ -77,8 +77,8 @@ const Home = () => {
           >
             👋 Hey there! I am a second year BCA student with a keen interest in
             web development. Being proficient in HTML, CSS, and JavaScript, I am
-            good at crafting interesting user interfaces using React JS and
-            Chakra UI. Find my projects and let’s do something amazing together!
+            good at crafting interesting user interfaces using <strong>React JS</strong> and
+          <strong>Chakra UI.</strong> Find my projects and let’s do something amazing together!
             Happy to bring ideas to life through code.
           </Text>
           <a href={resume} download="resume">

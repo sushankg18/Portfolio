@@ -1,23 +1,27 @@
-*{
-    scroll-behavior: smooth; 
+* {
+    scroll-behavior: smooth;
     background-color: 'white';
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 10px;
     padding: 0 10px;
     transition: all .2s;
 }
-::-webkit-scrollbar-track{
+
+::-webkit-scrollbar-track {
     background: transparent;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     background: #6B46C1;
     opacity: 0.5;
     border-radius: 20px;
 }
-::-webkit-scrollbar-thumb:hover{
+
+::-webkit-scrollbar-thumb:hover {
     background: orangered;
 }
+
 .goupBtn {
     animation: updown 1.2s infinite, all ease-in-out infinite;
     transition: all .3s;
@@ -28,36 +32,71 @@
     height: 50px;
     color: #6B46C1;
 }
-.goupBtn:hover{
+
+.goupBtn:hover {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.9);
 }
-.hover-link{
+
+.hover-link {
     padding: 3px 0px;
     transition: all 0.1s;
 }
-.hover-link:hover{
+
+.hover-link:hover {
     border-top: 2px solid rgb(206, 64, 206);
 }
-    
+
 
 @keyframes updown {
     0% {
         transform: translateY(15px);
     }
+
     50% {
         transform: translateY(0px);
     }
-    100%{
+
+    100% {
         transform: translateY(15px);
     }
 }
-.setting-icon{
+
+.setting-icon {
     animation: rotation 2s infinite ease-in;
     color: rgb(178, 0, 178);
     cursor: pointer;
 }
+
 @keyframes rotation {
-    0%{
+    0% {
         transform: rotate(360deg);
+    }
+}
+
+
+.loading-div {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    color: #fff;
+}
+
+.loader {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border-bottom: 2px solid #fff;
+    animation: loading 0.3s infinite ease-in-out;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
     }
 }
