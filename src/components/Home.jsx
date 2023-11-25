@@ -7,24 +7,75 @@ import {
   VStack,
   Button,
 } from '@chakra-ui/react';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import me from '../assets/Me.jpg';
-import img1 from '../assets/icons8-html.svg';
-import img2 from '../assets/icons8-css3.svg';
-import img3 from '../assets/icons8-javascript.svg';
-import img4 from '../assets/icons8-tailwind-css.svg';
-import img5 from '../assets/icons8-react-js.svg';
-import img7 from '../assets/icons8-github.svg';
-import img8 from '../assets/icons8-java.svg';
-import img9 from '../assets/icons8-c.svg';
-import img10 from '../assets/ChakraUi.svg';
-import img11 from '../assets/icons8-sass-avatar.svg';
-import img12 from '../assets/icons8-c (1).svg';
+import HTML from '../assets/icons8-html.svg';
+import CSS from '../assets/icons8-css3.svg';
+import JAVASCRIPT from '../assets/icons8-javascript.svg';
+import TAILWIND from '../assets/icons8-tailwind-css.svg';
+import REACT from '../assets/icons8-react-js.svg';
+import GITHUB from '../assets/icons8-github.svg';
+import JAVA from '../assets/icons8-java.svg';
+import C from '../assets/icons8-c.svg';
+import CHAKRA_UI from '../assets/ChakraUi.svg';
+import SASS from '../assets/icons8-sass-avatar.svg';
+import CPP from '../assets/icons8-c (1).svg';
 import About from './Education';
 import Projects from './Projects';
 import Footer from '../components/Footer';
 import resume from '../assets/resume.pdf';
 const Home = () => {
+  const [skills, setSkills] = useState([]);
+
+  useEffect(() => {
+    const allSkills = [
+      {
+        img: HTML,
+        name: 'HTML',
+      },
+      {
+        img: CSS,
+        name: 'CSS',
+      },
+      {
+        img: JAVASCRIPT,
+        name: 'JAVASCRIPT',
+      },
+      {
+        img: TAILWIND,
+        name: 'TAILWIND',
+      },
+      {
+        img: REACT,
+        name: 'REACT JS',
+      },
+      {
+        img: CHAKRA_UI,
+        name: 'CHAKRA UI',
+      },
+      {
+        img: SASS,
+        name: 'SASS',
+      },
+      {
+        img: GITHUB,
+        name: 'GITHUB',
+      },
+      {
+        img: JAVA,
+        name: 'JAVA',
+      },
+      {
+        img: C,
+        name: 'C',
+      },
+      {
+        img: CPP,
+        name: 'C++',
+      },
+    ];
+    setSkills(allSkills);
+  }, []);
   return (
     <Box
       w={'100%'}
@@ -41,8 +92,6 @@ const Home = () => {
         direction={['column', 'column']}
         paddingTop={['14', '20']}
       >
-
-
         <Image
           src={me}
           w={['48', '54', '62', '']}
@@ -77,9 +126,10 @@ const Home = () => {
           >
             👋 Hey there! I am a second year BCA student with a keen interest in
             web development. Being proficient in HTML, CSS, and JavaScript, I am
-            good at crafting interesting user interfaces using <strong>React JS</strong> and
-          <strong>Chakra UI.</strong> Find my projects and let’s do something amazing together!
-            Happy to bring ideas to life through code.
+            good at crafting interesting user interfaces using{' '}
+            <strong>React JS</strong> and
+            <strong>Chakra UI.</strong> Find my projects and let’s do something
+            amazing together! Happy to bring ideas to life through code.
           </Text>
           <a href={resume} download="resume">
             <Button
@@ -120,51 +170,12 @@ const Home = () => {
           flexWrap={'wrap'}
           fontWeight={'semibold'}
         >
-          <VStack cursor={'pointer'}>
-            <Image src={img1} boxSize={['5rem', '8rem']} />
-            <Text>HTML</Text>
-          </VStack>
-          <VStack cursor={'pointer'}>
-            <Image src={img2} boxSize={['5rem', '8rem']} />
-            <Text>CSS</Text>
-          </VStack>
-          <VStack cursor={'pointer'}>
-            <Image src={img3} boxSize={['5rem', '8rem']} />
-            <Text>JAVASCRIPT</Text>
-          </VStack>
-          <VStack cursor={'pointer'}>
-            <Image src={img4} boxSize={['5rem', '8rem']} />
-            <Text>TAILWIND</Text>
-          </VStack>
-          <VStack cursor={'pointer'}>
-            <Image src={img5} boxSize={['5rem', '8rem']} />
-            <Text>REACT JS</Text>
-          </VStack>
-
-          <VStack cursor={'pointer'}>
-            <Image src={img10} boxSize={['5rem', '8rem']} />
-            <Text>CHAKRA UI</Text>
-          </VStack>
-          <VStack cursor={'pointer'}>
-            <Image src={img11} boxSize={['5rem', '8rem']} />
-            <Text>SASS</Text>
-          </VStack>
-          <VStack cursor={'pointer'}>
-            <Image src={img7} boxSize={['5rem', '8rem']} />
-            <Text>GITHUB</Text>
-          </VStack>
-          <VStack cursor={'pointer'}>
-            <Image src={img8} boxSize={['5rem', '8rem']} />
-            <Text>JAVA</Text>
-          </VStack>
-          <VStack cursor={'pointer'}>
-            <Image src={img9} boxSize={['5rem', '8rem']} />
-            <Text>C</Text>
-          </VStack>
-          <VStack cursor={'pointer'}>
-            <Image src={img12} boxSize={['5rem', '8rem']} />
-            <Text>C++</Text>
-          </VStack>
+          {skills.map((i) => (
+            <VStack cursor={'pointer'}>
+              <Image src={i.img} boxSize={['5rem', '8rem']} />
+              <Text>{i.name}</Text>
+            </VStack>
+          ))}
         </Flex>
       </Box>
       <Projects />

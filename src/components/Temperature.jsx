@@ -4,7 +4,6 @@ import {
   VStack,
   Text,
   Button,
-  Container,
   Input,
 } from '@chakra-ui/react';
 import { IoIosClose, IoMdSearch } from 'react-icons/io';
