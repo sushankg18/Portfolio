@@ -15,17 +15,21 @@ import dalle from '../assets/dalle.jpg';
 import instaClone from '../assets/InstaClone.jpg';
 import Elearning from '../assets/Elearning.jpg';
 import crypto from '../assets/crypto.jpg';
+import Ecommerce from '../assets/Ecommerce.jpg'
 import console from '../assets/console.jpg';
 import { AiOutlineLink, AiFillGithub } from 'react-icons/ai';
 import { FaProjectDiagram } from 'react-icons/fa';
+import CategorySection from './CategorySection';
+
 const Projects = () => {
   const [AllProjects, setAllProjects] = useState([]);
-
+  
   useEffect(() => {
     const allProjects = [
       {
         img: crypto,
         title: 'CryptoJugad (cryptoCurrency)',
+        category : 'recent',
         techStack: 'Technologies : React js, Chakra UI, Chart JS',
         gitHubURL: 'https://github.com/sushankg18/crypto-Jugad',
         hostURL: 'https://cryptojugadind.vercel.app/',
@@ -33,12 +37,22 @@ const Projects = () => {
       {
         img: portfolio,
         title: 'Portfolio',
+        category : 'all',
         techStack: 'Technologies : React js, Chakra UI',
         gitHubURL: 'https://github.com/sushankg18/portfolio',
         hostURL: 'https://sushankportfolio.vercel.app/',
       },
       {
+        img: Ecommerce,
+        title: 'E-commerce',
+        category : 'recent',
+        techStack: 'Technologies : React js, LocalStorage',
+        gitHubURL: 'https://github.com/sushankg18/LoginSignup_webpage',
+        hostURL: 'https://e-commerceind.vercel.app/',
+      },
+      {
         img: dalle,
+        category : 'ongoing',
         title: 'DALL-E 2 Clone',
         techStack: 'Technologies : React js, SASS',
         gitHubURL: 'https://github.com/sushankg18/DALL-E-CLONE',
@@ -47,19 +61,22 @@ const Projects = () => {
       {
         img: instaClone,
         title: 'InstaChat',
+        category : 'all',
         techStack: 'Technologies : HTML, CSS, JAVASCRIPT',
         gitHubURL: 'https://github.com/sushankg18/InstaChat',
         hostURL: 'https://instachatind.vercel.app/',
       },
       {
         img: console,
+        category : 'all',
         title: 'Console Launcher (Gaming Platform)',
-        techStack: 'Technologies : React js, Redux, TDMB Api',
+        techStack: 'Technologies : Html, Css',
         gitHubURL: 'https://github.com/sushankg18/console-launcher',
         hostURL: 'https://console-launcher.vercel.app/',
       },
       {
         img: Elearning,
+        category : 'ongoing',
         title: 'Edu Explorer (E-learning platform)',
         techStack: 'Technologies : React js, SASS',
         gitHubURL: '',
@@ -83,12 +100,12 @@ const Projects = () => {
           fontSize={['28', '32', '32', '40']}
           display={'flex'}
           alignItems={'center'}
-          gap={'5'}
+          gap={'8'}
         >
           Few Projects <FaProjectDiagram />
         </Heading>
       </Flex>
-
+      <CategorySection  />
       <Flex
         h={'fit-content'}
         w={'full'}
