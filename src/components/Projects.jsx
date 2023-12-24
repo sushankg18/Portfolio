@@ -15,21 +15,21 @@ import dalle from '../assets/dalle.jpg';
 import instaClone from '../assets/InstaClone.jpg';
 import Elearning from '../assets/Elearning.jpg';
 import crypto from '../assets/crypto.jpg';
-import Ecommerce from '../assets/Ecommerce.jpg'
+import Ecommerce from '../assets/Ecommerce.jpg';
 import console from '../assets/console.jpg';
 import { AiOutlineLink, AiFillGithub } from 'react-icons/ai';
 import { FaProjectDiagram } from 'react-icons/fa';
-import CategorySection from './CategorySection';
 
 const Projects = () => {
-  const [AllProjects, setAllProjects] = useState([]);
-  
+  const [allProjects, setAllProjects] = useState([]);
+  const [filteredProjects, setFilteredProjects] = useState([]);
+
   useEffect(() => {
-    const allProjects = [
+    const projects = [
       {
         img: crypto,
         title: 'CryptoJugad (cryptoCurrency)',
-        category : 'recent',
+        category: 'recent',
         techStack: 'Technologies : React js, Chakra UI, Chart JS',
         gitHubURL: 'https://github.com/sushankg18/crypto-Jugad',
         hostURL: 'https://cryptojugadind.vercel.app/',
@@ -37,7 +37,7 @@ const Projects = () => {
       {
         img: portfolio,
         title: 'Portfolio',
-        category : 'all',
+        category: 'all',
         techStack: 'Technologies : React js, Chakra UI',
         gitHubURL: 'https://github.com/sushankg18/portfolio',
         hostURL: 'https://sushankportfolio.vercel.app/',
@@ -45,14 +45,14 @@ const Projects = () => {
       {
         img: Ecommerce,
         title: 'E-commerce',
-        category : 'recent',
+        category: 'recent',
         techStack: 'Technologies : React js, LocalStorage',
         gitHubURL: 'https://github.com/sushankg18/LoginSignup_webpage',
         hostURL: 'https://e-commerceind.vercel.app/',
       },
       {
         img: dalle,
-        category : 'ongoing',
+        category: 'ongoing',
         title: 'DALL-E 2 Clone',
         techStack: 'Technologies : React js, SASS',
         gitHubURL: 'https://github.com/sushankg18/DALL-E-CLONE',
@@ -61,14 +61,14 @@ const Projects = () => {
       {
         img: instaClone,
         title: 'InstaChat',
-        category : 'all',
+        category: 'all',
         techStack: 'Technologies : HTML, CSS, JAVASCRIPT',
         gitHubURL: 'https://github.com/sushankg18/InstaChat',
         hostURL: 'https://instachatind.vercel.app/',
       },
       {
         img: console,
-        category : 'all',
+        category: 'all',
         title: 'Console Launcher (Gaming Platform)',
         techStack: 'Technologies : Html, Css',
         gitHubURL: 'https://github.com/sushankg18/console-launcher',
@@ -76,7 +76,7 @@ const Projects = () => {
       },
       {
         img: Elearning,
-        category : 'ongoing',
+        category: 'ongoing',
         title: 'Edu Explorer (E-learning platform)',
         techStack: 'Technologies : React js, SASS',
         gitHubURL: '',
@@ -90,8 +90,17 @@ const Projects = () => {
         hostURL: 'https://video-hub-lovat.vercel.app/',
       },
     ];
-    setAllProjects(allProjects);
+    setAllProjects(projects);
+    setFilteredProjects(projects); // Initialize filteredProjects with all projects
   }, []);
+
+  const filterItem = (categItem) => {
+    const updateItem = allProjects.filter((curElem) => {
+      return curElem.category === categItem;
+    });
+    setFilteredProjects(updateItem); // Update only the filteredProjects state
+  };
+
   return (
     <Box w={'full'} h={'fit-content'} py={'20'} id="projects">
       <Flex justifyContent={'center'} pb={'10'}>
@@ -105,7 +114,42 @@ const Projects = () => {
           Few Projects <FaProjectDiagram />
         </Heading>
       </Flex>
-      <CategorySection  />
+
+      <Flex w={'full'} justifyContent={'space-between'} py={'4'}>
+        <Text
+          fontSize={'1.2rem'}
+          cursor={'pointer'}
+          onClick={() => setFilteredProjects(allProjects)}
+          color={'purple.500'}
+          borderBottom={'1px solid purple'}
+          fontWeight={'bold'}
+          _hover={{ borderBottom: 'none' }}
+        >
+          All
+        </Text>
+        <Text
+          fontSize={'1.2rem'}
+          cursor={'pointer'}
+          onClick={() => filterItem('recent')}
+          color={'purple.500'}
+          borderBottom={'1px solid purple'}
+          fontWeight={'bold'}
+          _hover={{ borderBottom: 'none' }}
+        >
+          Recent
+        </Text>
+        <Text
+          fontSize={'1.2rem'}
+          cursor={'pointer'}
+          onClick={() => filterItem('ongoing')}
+          color={'purple.500'}
+          borderBottom={'1px solid purple'}
+          fontWeight={'bold'}
+          _hover={{ borderBottom: 'none' }}
+        >
+          Ongoing
+        </Text>
+      </Flex>
       <Flex
         h={'fit-content'}
         w={'full'}
@@ -113,7 +157,7 @@ const Projects = () => {
         justifyContent={'space-evenly'}
         gap={['5', '']}
       >
-        {AllProjects.map(item => (
+        {filteredProjects.map((item) => (
           <Box
             w={['full', '', '20rem', '25rem']}
             h={'fit-content'}
