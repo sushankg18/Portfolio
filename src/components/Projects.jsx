@@ -91,14 +91,14 @@ const Projects = () => {
       },
     ];
     setAllProjects(projects);
-    setFilteredProjects(projects); // Initialize filteredProjects with all projects
+    setFilteredProjects(projects);
   }, []);
 
   const filterItem = (categItem) => {
     const updateItem = allProjects.filter((curElem) => {
       return curElem.category === categItem;
     });
-    setFilteredProjects(updateItem); // Update only the filteredProjects state
+    setFilteredProjects(updateItem); 
   };
 
   return (
@@ -115,12 +115,11 @@ const Projects = () => {
         </Heading>
       </Flex>
 
-      <Flex w={'full'} justifyContent={'space-between'} py={'4'}>
+      <Flex w={'full'} justifyContent={'space-evenly'} py={'4'}>
         <Text
           fontSize={'1.2rem'}
           cursor={'pointer'}
           onClick={() => setFilteredProjects(allProjects)}
-          color={'purple.500'}
           borderBottom={'1px solid purple'}
           fontWeight={'bold'}
           _hover={{ borderBottom: 'none' }}
@@ -131,7 +130,6 @@ const Projects = () => {
           fontSize={'1.2rem'}
           cursor={'pointer'}
           onClick={() => filterItem('recent')}
-          color={'purple.500'}
           borderBottom={'1px solid purple'}
           fontWeight={'bold'}
           _hover={{ borderBottom: 'none' }}
@@ -142,7 +140,6 @@ const Projects = () => {
           fontSize={'1.2rem'}
           cursor={'pointer'}
           onClick={() => filterItem('ongoing')}
-          color={'purple.500'}
           borderBottom={'1px solid purple'}
           fontWeight={'bold'}
           _hover={{ borderBottom: 'none' }}
