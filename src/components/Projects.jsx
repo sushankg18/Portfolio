@@ -150,7 +150,6 @@ const Projects = () => {
         flexWrap={'wrap'}
         justifyContent={'space-evenly'}
         gap={['5', '2rem']}
-        bgColor={'rgb(0, 30, 78)'}
         padding={'2rem'}
         borderRadius={'1rem'}
       >

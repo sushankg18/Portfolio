@@ -52,10 +52,6 @@ const Home = () => {
         name: 'CHAKRA UI',
       },
       {
-        img: TAILWIND,
-        name: 'TAILWIND',
-      },
-      {
         img: SASS,
         name: 'SASS',
       },
@@ -154,7 +150,7 @@ const Home = () => {
           alignItems={'stretch'}
         >
           {skills.map((i) => (
-            <VStack cursor={'pointer'} bgColor={'blackAlpha.700'} borderRadius={'1rem'} padding={'.6rem'}>
+            <VStack bgColor={'blackAlpha.700'} borderRadius={'1rem'} padding={'.6rem'}>
               <Image src={i.img} boxSize={['5rem', '6rem']} />
               <Text color={'white'}>{i.name}</Text>
             </VStack>
