@@ -115,15 +115,11 @@ const Projects = () => {
         </Heading>
       </Flex>
 
-      <Flex w={'full'} justifyContent={'space-evenly'} color={'#6B46C1'} py={'4'}  mb={'1rem'}>
+      <Flex w={'50%'} justifyContent={'space-evenly'}  py={'4'}  mb={'1rem'}>
         <Text
           fontSize={'1.2rem'}
           cursor={'pointer'}
           onClick={() => setFilteredProjects(allProjects)}
-          width={'full'}
-          display={'flex'}
-          justifyContent={'center'}
-          borderRight={'2px solid black'}
           fontWeight={'bold'}
           _hover={{ borderBottom: 'none' }}
         >
@@ -133,11 +129,7 @@ const Projects = () => {
           fontSize={'1.2rem'}
           cursor={'pointer'}
           onClick={() => filterItem('recent')}
-          display={'flex'}
-          justifyContent={'center'}
           fontWeight={'bold'}
-          width={'full'}
-          borderRight={'2px solid black'}
           _hover={{ borderBottom: 'none' }}
         >
           Recent
@@ -146,10 +138,7 @@ const Projects = () => {
           fontSize={'1.2rem'}
           cursor={'pointer'}
           onClick={() => filterItem('ongoing')}
-          display={'flex'}
-          justifyContent={'center'}
           fontWeight={'bold'}
-          width={'full'}
           _hover={{ borderBottom: 'none' }}
         >
           Ongoing
@@ -160,19 +149,19 @@ const Projects = () => {
         w={'full'}
         flexWrap={'wrap'}
         justifyContent={'space-evenly'}
-        gap={['5', '']}
-        bgColor={'rgb(0, 0, 48)'}
+        gap={['5', '2rem']}
+        bgColor={'rgb(0, 30, 78)'}
         padding={'2rem'}
         borderRadius={'1rem'}
       >
         {filteredProjects.map((item) => (
           <Box
-            w={['full', '', '20rem', '25rem']}
+            w={['full', '', '20rem', '22rem']}
             h={'fit-content'}
             py={'4'}
             borderRadius={'1rem'}
             transition={'all 0.5s'}
-            bgColor={'whitesmoke'}
+            bgColor={'white'}
             _hover={{
               boxShadow: '0px 0px 12px rgba(0, 0, 0, 0.7)',
             }}
