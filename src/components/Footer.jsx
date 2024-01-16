@@ -8,8 +8,11 @@ import {
   VStack,
   Text,
   Textarea,
+  flexbox,
 } from '@chakra-ui/react';
 import React from 'react';
+import { ImHeadphones } from "react-icons/im";
+import { RiUserShared2Fill } from "react-icons/ri";
 import {
   AiFillLinkedin,
   AiOutlineSend,
@@ -22,6 +25,7 @@ import {
 } from 'react-icons/ai';
 import { FaUniversity, FaProjectDiagram, FaCode } from 'react-icons/fa';
 import { IoLogoWhatsapp } from 'react-icons/io';
+import { SiQuicktime } from "react-icons/si";
 import { HashLink } from 'react-router-hash-link';
 const Footer = () => {
   const styleItem = {
@@ -64,8 +68,8 @@ const Footer = () => {
         paddingBottom={'5'}
       >
         <VStack w={['full', 'full', 'full', 'full']} {...styleItem} spacing={4}>
-          <Heading color={'purple.600'} fontSize={['32', '', '22', '32']}>
-            Contact Me
+          <Heading color={'purple.600'} fontSize={['32', '', '22', '32']} display={'flex'} alignItems={'center'} gap={'1rem'}>
+          <ImHeadphones fontSize={'1.5rem'}/>Get in Touch 
           </Heading>
           <Text alignSelf={['', '', 'center', 'flex-start']}>
             Wanna talk with me? Just drop a message!
@@ -105,8 +109,8 @@ const Footer = () => {
         </VStack>
 
         <VStack w={['', '45%', '45%', 'full']} {...styleItem}>
-          <Heading color={'purple.600'} fontSize={['32', '', '22', '32']}>
-            Quick links
+          <Heading color={'purple.600'} fontSize={['32', '', '22', '32']} display={'flex'} alignItems={'center'} gap={'1rem'}>
+           <SiQuicktime fontSize={'1.5rem'} /> Quick links
           </Heading>
           <Box {...styleItem} gap={'5'}>
             <VStack gap={'5'} fontWeight={'semibold'} alignItems={'flex-start'}>
@@ -140,8 +144,8 @@ const Footer = () => {
         </VStack>
 
         <VStack w={['', '45%', '45%', 'full']} {...styleItem}>
-          <Heading color={'purple.600'} fontSize={['32', '', '22', '32']}>
-            Social Media
+          <Heading color={'purple.600'} fontSize={['32', '', '22', '32']} display={'flex'} alignItems={'center'} gap={'1rem'}>
+          <RiUserShared2Fill   fontSize={'1.5rem'} />Social Handles
           </Heading>
           <Box {...styleItem} gap={'5'}>
             <a
@@ -211,7 +215,7 @@ const Footer = () => {
           fontSize={['9', '14']}
           letterSpacing={'widest'}
         >
-          Copyright ©2023 | All Rights Reserved | Sushank Gautam
+          Designed by Sushank Gautam ❤️
         </Text>
       </Box>
     </Box>
@@ -219,4 +223,3 @@ const Footer = () => {
 };
 
 export default Footer;
-// <iframe width="1020" height="574" src="https://www.youtube.com/embed/F5yQ1BgDIDQ" title="✅ How to Get YouTube API Key 2023 | Create YouTube Data API v3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

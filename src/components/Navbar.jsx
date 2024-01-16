@@ -81,7 +81,7 @@ const Navbar = () => {
             Contact
           </HashLink>
 
-          <IoIosSettings fontSize={'xx-large'} className="setting-icon" onClick={openTempComp} />
+          <IoIosSettings fontSize={'xx-large'} className="setting-icon" color='#6B46C1' onClick={openTempComp} />
         </Flex>
 
         <Button
@@ -140,7 +140,7 @@ const Navbar = () => {
                 >
                   Contact
                 </HashLink>
-                <IoIosSettings fontSize={'xx-large'} className="setting-icon" onClick={openTempComp} />
+                <IoIosSettings fontSize={'xx-large'} className="setting-icon" color='#6B46C1' onClick={openTempComp} />
               </Flex>
             </DrawerBody>
           </DrawerContent>

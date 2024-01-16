@@ -115,12 +115,15 @@ const Projects = () => {
         </Heading>
       </Flex>
 
-      <Flex w={'full'} justifyContent={'space-evenly'} py={'4'}>
+      <Flex w={'full'} justifyContent={'space-evenly'} color={'#6B46C1'} py={'4'}  mb={'1rem'}>
         <Text
           fontSize={'1.2rem'}
           cursor={'pointer'}
           onClick={() => setFilteredProjects(allProjects)}
-          borderBottom={'1px solid purple'}
+          width={'full'}
+          display={'flex'}
+          justifyContent={'center'}
+          borderRight={'2px solid black'}
           fontWeight={'bold'}
           _hover={{ borderBottom: 'none' }}
         >
@@ -130,8 +133,11 @@ const Projects = () => {
           fontSize={'1.2rem'}
           cursor={'pointer'}
           onClick={() => filterItem('recent')}
-          borderBottom={'1px solid purple'}
+          display={'flex'}
+          justifyContent={'center'}
           fontWeight={'bold'}
+          width={'full'}
+          borderRight={'2px solid black'}
           _hover={{ borderBottom: 'none' }}
         >
           Recent
@@ -140,8 +146,10 @@ const Projects = () => {
           fontSize={'1.2rem'}
           cursor={'pointer'}
           onClick={() => filterItem('ongoing')}
-          borderBottom={'1px solid purple'}
+          display={'flex'}
+          justifyContent={'center'}
           fontWeight={'bold'}
+          width={'full'}
           _hover={{ borderBottom: 'none' }}
         >
           Ongoing
@@ -153,13 +161,18 @@ const Projects = () => {
         flexWrap={'wrap'}
         justifyContent={'space-evenly'}
         gap={['5', '']}
+        bgColor={'rgb(0, 0, 48)'}
+        padding={'2rem'}
+        borderRadius={'1rem'}
       >
         {filteredProjects.map((item) => (
           <Box
             w={['full', '', '20rem', '25rem']}
             h={'fit-content'}
             py={'4'}
+            borderRadius={'1rem'}
             transition={'all 0.5s'}
+            bgColor={'whitesmoke'}
             _hover={{
               boxShadow: '0px 0px 12px rgba(0, 0, 0, 0.7)',
             }}
