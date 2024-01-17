@@ -76,7 +76,7 @@ const Home = () => {
   }, []);
   return (
     <Box w={'100%'} h={['fit-content', '100%']} px={['5', '10']} py={['0', '0']} fontFamily={'Josefin Sans'} >
-      <Flex alignSelf={'center'} flexDirection={['column','row-reverse']} justifyContent={'space-between'} h={['fit-content','fit-content','fit-content', '80vh']} alignItems={'center'} id="home" direction={['column', 'column']} paddingTop={['14', '20']} >
+      <Flex alignSelf={'center'} flexDirection={['column', 'row-reverse']} justifyContent={'space-between'} h={['fit-content', 'fit-content', 'fit-content', '80vh']} alignItems={'center'} id="home" direction={['column', 'column']} paddingTop={['14', '20']} >
         <Image src={me} w={['48', '54', '62', '80']} borderRadius={['80px 50px 70px 10px', 'full']} transition={'all 0.4s'}
           boxShadow={['0px 0px 20px rgba(0, 0, 0, 1)', 'none']} _hover={{ boxShadow: '0px 0px 20px rgba(0, 0, 0, 1)', }} />
         <VStack w={['full', '', 'full', '70%']} alignItems={'flex-start'} spacing={'10'} m={['10', '5']}>
@@ -134,7 +134,7 @@ const Home = () => {
             gap={'1rem'}
             alignItems={'center'}
           >
-             Some of My Skills <FaLaptopCode />
+            Some of My Skills <FaLaptopCode />
           </Heading>
         </Flex>
 
@@ -145,13 +145,13 @@ const Home = () => {
           flexWrap={'wrap'}
           fontWeight={'semibold'}
           bgColor={'purple.500'}
-          padding={'2rem 3rem'}
+          padding={['1rem .3rem','','','2rem 3rem']}
           borderRadius={'1rem'}
           alignItems={'stretch'}
         >
           {skills.map((i) => (
-            <VStack bgColor={'blackAlpha.700'} borderRadius={'1rem'} padding={'.6rem'}>
-              <Image src={i.img} boxSize={['5rem', '6rem']} />
+            <VStack bgColor={'blackAlpha.700'} w={['40%','','fit-content','fit-content']} borderRadius={'1rem'} padding={'.6rem'}>
+              <Image src={i.img} boxSize={['4rem', '6rem']} />
               <Text color={'white'}>{i.name}</Text>
             </VStack>
           ))}

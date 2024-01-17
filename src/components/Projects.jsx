@@ -115,7 +115,7 @@ const Projects = () => {
         </Heading>
       </Flex>
 
-      <Flex w={'50%'} justifyContent={'space-evenly'}  py={'4'}  mb={'1rem'}>
+      <Flex w={['100%','','','50%']} justifyContent={'space-evenly'}  py={'4'}  mb={'1rem'}>
         <Text
           fontSize={'1.2rem'}
           cursor={'pointer'}
