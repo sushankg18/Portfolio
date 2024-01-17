@@ -76,8 +76,8 @@ const Home = () => {
   }, []);
   return (
     <Box w={'100%'} h={['fit-content', '100%']} px={['5', '10']} py={['0', '0']} fontFamily={'Josefin Sans'} >
-      <Flex alignSelf={'center'} flexDirection={'row-reverse'} justifyContent={'space-between'} h={['fit-content', '80vh']} alignItems={'center'} id="home" direction={['column', 'column']} paddingTop={['14', '20']} >
-        <Image src={MyAvatar} w={['48', '54', '62', '80']} borderRadius={['80px 50px 70px 10px', 'full']} transition={'all 0.4s'}
+      <Flex alignSelf={'center'} flexDirection={['column','row-reverse']} justifyContent={'space-between'} h={['fit-content','fit-content','fit-content', '80vh']} alignItems={'center'} id="home" direction={['column', 'column']} paddingTop={['14', '20']} >
+        <Image src={me} w={['48', '54', '62', '80']} borderRadius={['80px 50px 70px 10px', 'full']} transition={'all 0.4s'}
           boxShadow={['0px 0px 20px rgba(0, 0, 0, 1)', 'none']} _hover={{ boxShadow: '0px 0px 20px rgba(0, 0, 0, 1)', }} />
         <VStack w={['full', '', 'full', '70%']} alignItems={'flex-start'} spacing={'10'} m={['10', '5']}>
           <Text

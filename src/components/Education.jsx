@@ -19,18 +19,18 @@ const Education = () => {
           <Heading color={'purple.600'} fontSize={['28', '32', '32', '40']} display={'flex'} alignItems={'center'} gap={'5'}>
             Education <MdSchool   />
           </Heading>
-          <Text fontSize={'1.1rem'}>"Education is the catalyst for individual growth, unlocking doors to endless possibilities."</Text>
+          <Text fontSize={['.8rem','','1rem','1.1rem']}>"Education is the catalyst for individual growth, unlocking doors to endless possibilities."</Text>
         </VStack>
-        <VStack w={'80%'} gap={['8', '12']} >
+        <VStack w={['100%','100%','100%','80%']} gap={['8', '12']} >
           <VStack w={'full'} p={['0', '3']} alignItems={'flex-start'} bgColor={'whitesmoke'}>
-            <Flex direction={['column', '', 'row', 'row']} >
-              <Box w={['16', '', '18', '36']} h={['16', '', '18', '36']} >
+            <Flex direction={['row', '', 'row', 'row']} gap={'4'}>
+              <Box w={['40', '', '28', '36']} h={['48', '', '40', '36']} >
                 <Image w={'full'} h={'full'} objectFit={'cover'} src={img17}/>
               </Box>
               <VStack
                 alignItems={'flex-start'}
                 px={['0', '5']}
-                gap={['5', '', '', '1']}
+                gap={['2', '', '', '1']}
               >
                 <Text fontWeight={'bold'} fontSize={['18', '24']}>
                   Institute of Professional Excellence and Management
@@ -50,10 +50,10 @@ const Education = () => {
 
           <VStack w={'full'} p={['', '3']} py={'3'} alignItems={['flex-start', '', 'flex-start', 'flex-start']} bgColor={'whitesmoke'}>
             <Flex direction={['column', 'column', 'row', 'row',]}>
-            <Box w={['16', '', '18', '36']} h={['16', '', '18', '36']} >
+            <Box w={['16', '', '28', '36']} h={['16', '', '40', '36']} >
                 <Image w={'full'} h={'full'} objectFit={'cover'} src={img18}/>
               </Box>
-              <VStack alignItems={['flex-start', 'flex-start', 'flex-start', 'flex-start',]} px={['0', '5']} gap={['5', '', '', '1']}>
+              <VStack alignItems={['flex-start', 'flex-start', 'flex-start', 'flex-start',]} px={['0', '5']} gap={['2', '', '', '1']}>
                 <Text fontWeight={'bold'} fontSize={['18', '24']}>
                   Kendriya Vidyalaya Sangathan
                 </Text>
