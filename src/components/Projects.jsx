@@ -9,6 +9,7 @@ import {
   Button,
 } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
+import { Tabs, TabList, Tab, TabIndicator } from '@chakra-ui/react'
 import portfolio from '../assets/portfolio.jpg';
 import practise from '../assets/todo.jpg';
 import dalle from '../assets/dalle.jpg';
@@ -17,6 +18,7 @@ import Elearning from '../assets/Elearning.jpg';
 import crypto from '../assets/crypto.jpg';
 import Ecommerce from '../assets/Ecommerce.jpg';
 import console from '../assets/console.jpg';
+import gameNestHub from '../assets/gamenesthub.jpg'
 import { AiOutlineLink, AiFillGithub } from 'react-icons/ai';
 import { FaProjectDiagram } from 'react-icons/fa';
 
@@ -26,6 +28,14 @@ const Projects = () => {
 
   useEffect(() => {
     const projects = [
+      {
+        img: gameNestHub,
+        title: 'GameNestHub (full fledged)',
+        category: 'ongoing',
+        techStack: 'Technologies : React js, Chakra UI, Firebase, Redux toolkit',
+        gitHubURL: 'https://github.com/sushankg18/GameNestHub',
+        hostURL: 'https://gamenesthub.vercel.app/',
+      },
       {
         img: crypto,
         title: 'CryptoJugad (cryptoCurrency)',
@@ -66,14 +76,7 @@ const Projects = () => {
         gitHubURL: 'https://github.com/sushankg18/InstaChat',
         hostURL: 'https://instachatind.vercel.app/',
       },
-      {
-        img: console,
-        category: 'all',
-        title: 'Console Launcher (Gaming Platform)',
-        techStack: 'Technologies : Html, Css',
-        gitHubURL: 'https://github.com/sushankg18/console-launcher',
-        hostURL: 'https://console-launcher.vercel.app/',
-      },
+
       {
         img: Elearning,
         category: 'ongoing',
@@ -89,6 +92,14 @@ const Projects = () => {
         gitHubURL: 'https://github.com/sushankg18/VideoHub',
         hostURL: 'https://video-hub-lovat.vercel.app/',
       },
+      {
+        img: console,
+        category: 'all',
+        title: 'Console Launcher',
+        techStack: 'Technologies : Html, Css',
+        gitHubURL: 'https://github.com/sushankg18/console-launcher',
+        hostURL: 'https://console-launcher.vercel.app/',
+      },
     ];
     setAllProjects(projects);
     setFilteredProjects(projects);
@@ -98,7 +109,7 @@ const Projects = () => {
     const updateItem = allProjects.filter((curElem) => {
       return curElem.category === categItem;
     });
-    setFilteredProjects(updateItem); 
+    setFilteredProjects(updateItem);
   };
 
   return (
@@ -115,47 +126,31 @@ const Projects = () => {
         </Heading>
       </Flex>
 
-      <Flex w={['100%','','','50%']} justifyContent={'space-evenly'}  py={'4'}  mb={'1rem'}>
-        <Text
-          fontSize={'1.2rem'}
-          cursor={'pointer'}
-          onClick={() => setFilteredProjects(allProjects)}
-          fontWeight={'bold'}
-          _hover={{ borderBottom: 'none' }}
-        >
-          All
-        </Text>
-        <Text
-          fontSize={'1.2rem'}
-          cursor={'pointer'}
-          onClick={() => filterItem('recent')}
-          fontWeight={'bold'}
-          _hover={{ borderBottom: 'none' }}
-        >
-          Recent
-        </Text>
-        <Text
-          fontSize={'1.2rem'}
-          cursor={'pointer'}
-          onClick={() => filterItem('ongoing')}
-          fontWeight={'bold'}
-          _hover={{ borderBottom: 'none' }}
-        >
-          Ongoing
-        </Text>
-      </Flex>
+      <Tabs variant={'unstyled'} w={['100%', '50%']} margin={'0 auto'} position={'relative'}>
+        <TabList justifyContent={'space-between'}>
+          <Tab fontSize={'1.2rem'} fontWeight={'bold'} onClick={() => setFilteredProjects(allProjects)}>All</Tab>
+          <Tab fontSize={'1.2rem'} fontWeight={'bold'} onClick={() => filterItem('recent')}>Recent</Tab>
+          <Tab fontSize={'1.2rem'} fontWeight={'bold'} onClick={() => filterItem('ongoing')}>OnGoing</Tab>
+        </TabList>
+        <TabIndicator
+          mt="-1.5px"
+          height="2px"
+          bg="blue.500"
+          borderRadius="1px"
+        />
+      </Tabs>
       <Flex
         h={'fit-content'}
         w={'full'}
         flexWrap={'wrap'}
         justifyContent={'space-evenly'}
         gap={['5', '2rem']}
-        padding={'2rem'}
+        padding={'2rem .3rem'}
         borderRadius={'1rem'}
       >
         {filteredProjects.map((item) => (
           <Box
-            w={['full', '', '20rem', '22rem']}
+            w={['100%', '', '20rem', '22rem']}
             h={'fit-content'}
             py={'4'}
             borderRadius={'1rem'}
@@ -195,10 +190,10 @@ const Projects = () => {
                   </Button>
                 </a>
               </HStack>
-              <Text fontWeight={'bold'} fontSize={'18'} py={'2'}>
-                {item.title}
-              </Text>
-              <Text fontWeight={'semibold'}>{item.techStack}</Text>
+              <VStack px={'1rem'}>
+                <Text fontWeight={'bold'} fontSize={'18'} py={'2'}>{item.title}</Text>
+                <Text fontWeight={'semibold'} textAlign={'center'}>{item.techStack}</Text>
+              </VStack>
             </VStack>
           </Box>
         ))}
