@@ -25,10 +25,14 @@ import CPP from '../assets/icons8-c (1).svg';
 import reactNative from '../assets/icons8-react-480.png'
 import firebase from '../assets/icons8-firebase-480.png'
 import redux from '../assets/icons8-redux-480.png'
+import nodeJS from '../assets/node js.png'
+import expressJS from '../assets/express js (2).png'
+import mongoDB from '../assets/mongo db.png'
 import Education from './Education';
 import Projects from './Projects';
 import Footer from '../components/Footer';
 import resume from '../assets/resume.pdf';
+import { SiMongodb } from 'react-icons/si';
 const Home = () => {
   const [skills, setSkills] = useState([]);
 
@@ -59,6 +63,30 @@ const Home = () => {
         name: 'SASS',
       },
       {
+        img: firebase,
+        name: "FIREBASE"
+      },
+      {
+        img: reactNative,
+        name: "REACT NATIVE"
+      },
+      {
+        img: redux,
+        name: "REDUX TOOLKIT"
+      },
+      {
+        img: nodeJS,
+        name: "NODE JS"
+      },
+      {
+        img: expressJS,
+        name: "EXPRESS JS"
+      },
+      {
+        img: mongoDB,
+        name: "MONGO DB"
+      },
+      {
         img: GITHUB,
         name: 'GITHUB',
       },
@@ -70,19 +98,7 @@ const Home = () => {
         img: CPP,
         name: 'C++',
       },
-      {
-        img: firebase,
-        name: "FIREBASE"
-      },
-      {
-        img: reactNative,
-        name : "REACT NATIVE"
-      },
-      {
-        img: redux,
-        name : "REDUX TOOLKIT"
-      },
-      
+
     ];
     setSkills(allSkills);
   }, []);
@@ -156,15 +172,15 @@ const Home = () => {
           justifyContent={['space-evenly', '', 'space-evenly', 'center']}
           flexWrap={'wrap'}
           fontWeight={'semibold'}
-          bgColor={'purple.500'}
-          padding={['1rem .3rem','','','2rem 3rem']}
+          bgColor={'#33036C'}
+          padding={['1rem .3rem', '', '', '2rem 3rem']}
           borderRadius={'1rem'}
           alignItems={'stretch'}
         >
           {skills.map((i) => (
-            <VStack bgColor={'blackAlpha.700'} w={['40%','','fit-content','9rem']} h={'fit-content'} borderRadius={'1rem'} padding={'.6rem'}>
-              <Image src={i.img} boxSize={['4rem', '6rem']} />
-              <Text textAlign={'center'} color={'white'}>{i.name}</Text>
+            <VStack bgColor={'#fff'} w={['40%', '', 'fit-content', '9rem']} h={'9rem'} justifyContent={'center'} gap={'1rem'} borderRadius={'1rem'} padding={'.6rem'}>
+              <Image src={i.img} boxSize={['4rem', '3rem']} />
+              <Text textAlign={'center'} color={'#000'} noOfLines={1} w={'100%'}>{i.name}</Text>
             </VStack>
           ))}
         </Flex>
