@@ -19,13 +19,13 @@ import Temperature from './Temperature';
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [tempcomp, setTempComp] = useState(false);
- 
-  const openTempComp = ()=>{
-      setTempComp(true)
+
+  const openTempComp = () => {
+    setTempComp(true)
   }
-  const closeTempComp = ()=>{
+  const closeTempComp = () => {
     setTempComp(false)
-}
+  }
 
   const smallScreenNavStyling = {
     padding: '2px 20px',
@@ -146,7 +146,7 @@ const Navbar = () => {
           </DrawerContent>
         </Drawer>
 
-        {tempcomp && <Temperature onClose={closeTempComp}/>}
+        {tempcomp && <Temperature onClose={closeTempComp} />}
 
       </Flex>
     </Box>

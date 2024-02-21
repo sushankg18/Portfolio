@@ -19,19 +19,28 @@ import crypto from '../assets/crypto.jpg';
 import Ecommerce from '../assets/Ecommerce.jpg';
 import console from '../assets/console.jpg';
 import gameNestHub from '../assets/gamenesthub.jpg'
+import filmflixAndroid from '../assets/filimflixAndroid.jpg'
 import { AiOutlineLink, AiFillGithub } from 'react-icons/ai';
 import { FaProjectDiagram } from 'react-icons/fa';
 
 const Projects = () => {
   const [allProjects, setAllProjects] = useState([]);
   const [filteredProjects, setFilteredProjects] = useState([]);
-
+  
   useEffect(() => {
     const projects = [
       {
+        img: filmflixAndroid,
+        category: 'ongoing',
+        title: 'FILMFLIX Android app',
+        techStack: 'Technologies : React Native, React-Native-Paper',
+        gitHubURL: 'https://github.com/sushankg18/FilmFlix-Android-App',
+        hostURL: '',
+      },
+      {
         img: gameNestHub,
         title: 'GameNestHub (full fledged)',
-        category: 'ongoing',
+        category: 'recent',
         techStack: 'Technologies : React js, Chakra UI, Firebase, Redux toolkit',
         gitHubURL: 'https://github.com/sushankg18/GameNestHub',
         hostURL: 'https://gamenesthub.vercel.app/',
@@ -62,8 +71,8 @@ const Projects = () => {
       },
       {
         img: dalle,
-        category: 'ongoing',
-        title: 'DALL-E 2 Clone',
+        category: 'recent',
+        title: 'DALL-E 2 UI clone',
         techStack: 'Technologies : React js, SASS',
         gitHubURL: 'https://github.com/sushankg18/DALL-E-CLONE',
         hostURL: 'https://dall-e-cloneind.vercel.app/',

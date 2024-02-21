@@ -22,6 +22,9 @@ import C from '../assets/icons8-c.svg';
 import CHAKRA_UI from '../assets/ChakraUi.svg';
 import SASS from '../assets/icons8-sass-avatar.svg';
 import CPP from '../assets/icons8-c (1).svg';
+import reactNative from '../assets/icons8-react-480.png'
+import firebase from '../assets/icons8-firebase-480.png'
+import redux from '../assets/icons8-redux-480.png'
 import Education from './Education';
 import Projects from './Projects';
 import Footer from '../components/Footer';
@@ -60,10 +63,6 @@ const Home = () => {
         name: 'GITHUB',
       },
       {
-        img: JAVA,
-        name: 'JAVA',
-      },
-      {
         img: C,
         name: 'C',
       },
@@ -71,6 +70,19 @@ const Home = () => {
         img: CPP,
         name: 'C++',
       },
+      {
+        img: firebase,
+        name: "FIREBASE"
+      },
+      {
+        img: reactNative,
+        name : "REACT NATIVE"
+      },
+      {
+        img: redux,
+        name : "REDUX TOOLKIT"
+      },
+      
     ];
     setSkills(allSkills);
   }, []);
@@ -141,7 +153,7 @@ const Home = () => {
         <Flex
           gap={'12'}
           w={'100%'}
-          justifyContent={['space-evenly', '', 'space-evenly', 'flex-start']}
+          justifyContent={['space-evenly', '', 'space-evenly', 'center']}
           flexWrap={'wrap'}
           fontWeight={'semibold'}
           bgColor={'purple.500'}
@@ -150,9 +162,9 @@ const Home = () => {
           alignItems={'stretch'}
         >
           {skills.map((i) => (
-            <VStack bgColor={'blackAlpha.700'} w={['40%','','fit-content','fit-content']} borderRadius={'1rem'} padding={'.6rem'}>
+            <VStack bgColor={'blackAlpha.700'} w={['40%','','fit-content','9rem']} h={'fit-content'} borderRadius={'1rem'} padding={'.6rem'}>
               <Image src={i.img} boxSize={['4rem', '6rem']} />
-              <Text color={'white'}>{i.name}</Text>
+              <Text textAlign={'center'} color={'white'}>{i.name}</Text>
             </VStack>
           ))}
         </Flex>
