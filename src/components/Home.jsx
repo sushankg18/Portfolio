@@ -66,38 +66,38 @@ const Home = () => {
         img: firebase,
         name: "FIREBASE"
       },
-      {
-        img: reactNative,
-        name: "REACT NATIVE"
-      },
-      {
-        img: redux,
-        name: "REDUX TOOLKIT"
-      },
-      {
-        img: nodeJS,
-        name: "NODE JS"
-      },
-      {
-        img: expressJS,
-        name: "EXPRESS JS"
-      },
-      {
-        img: mongoDB,
-        name: "MONGO DB"
-      },
+      // {
+      //   img: reactNative,
+      //   name: "REACT NATIVE"
+      // },
+      // {
+      //   img: redux,
+      //   name: "REDUX TOOLKIT"
+      // },
+      // {
+      //   img: nodeJS,
+      //   name: "NODE JS"
+      // },
+      // {
+      //   img: expressJS,
+      //   name: "EXPRESS JS"
+      // },
+      // {
+      //   img: mongoDB,
+      //   name: "MONGO DB"
+      // },
       {
         img: GITHUB,
         name: 'GITHUB',
       },
-      {
-        img: C,
-        name: 'C',
-      },
-      {
-        img: CPP,
-        name: 'C++',
-      },
+      // {
+      //   img: C,
+      //   name: 'C',
+      // },
+      // {
+      //   img: CPP,
+      //   name: 'C++',
+      // },
 
     ];
     setSkills(allSkills);
