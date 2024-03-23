@@ -66,6 +66,10 @@ const Home = () => {
         img: firebase,
         name: "FIREBASE"
       },
+      {
+        img: GITHUB,
+        name: 'GITHUB',
+      },
       // {
       //   img: reactNative,
       //   name: "REACT NATIVE"
@@ -86,10 +90,6 @@ const Home = () => {
       //   img: mongoDB,
       //   name: "MONGO DB"
       // },
-      {
-        img: GITHUB,
-        name: 'GITHUB',
-      },
       // {
       //   img: C,
       //   name: 'C',
