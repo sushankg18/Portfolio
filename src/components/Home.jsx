@@ -17,6 +17,7 @@ import JAVASCRIPT from '../assets/icons8-javascript.svg';
 import TAILWIND from '../assets/icons8-tailwind-css.svg';
 import REACT from '../assets/icons8-react-js.svg';
 import GITHUB from '../assets/icons8-github.svg';
+import GIT from '../assets/icons8-git.svg';
 import JAVA from '../assets/icons8-java.svg';
 import C from '../assets/icons8-c.svg';
 import CHAKRA_UI from '../assets/ChakraUi.svg';
@@ -59,16 +60,16 @@ const Home = () => {
         name: 'CHAKRA UI',
       },
       {
-        img: SASS,
-        name: 'SASS',
-      },
-      {
         img: firebase,
         name: "FIREBASE"
       },
       {
         img: GITHUB,
         name: 'GITHUB',
+      },
+      {
+        img: GIT,
+        name: 'GIT',
       },
       // {
       //   img: reactNative,
@@ -131,7 +132,7 @@ const Home = () => {
             <strong>Chakra UI.</strong> Find my projects and let’s do something
             amazing together! Happy to bring ideas to life through code.
           </Text>
-          <a href={resume} download="resume">
+          <a href={resume} download="sushank gautam resume">
             <Button
               colorScheme="purple"
               variant={'outline'}
