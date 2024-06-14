@@ -71,34 +71,18 @@ const Home = () => {
         img: GIT,
         name: 'GIT',
       },
-      // {
-      //   img: reactNative,
-      //   name: "REACT NATIVE"
-      // },
-      // {
-      //   img: redux,
-      //   name: "REDUX TOOLKIT"
-      // },
-      // {
-      //   img: nodeJS,
-      //   name: "NODE JS"
-      // },
-      // {
-      //   img: expressJS,
-      //   name: "EXPRESS JS"
-      // },
-      // {
-      //   img: mongoDB,
-      //   name: "MONGO DB"
-      // },
-      // {
-      //   img: C,
-      //   name: 'C',
-      // },
-      // {
-      //   img: CPP,
-      //   name: 'C++',
-      // },
+      {
+        img: nodeJS,
+        name: "NODE JS"
+      },
+      {
+        img: expressJS,
+        name: "EXPRESS JS"
+      },
+      {
+        img: mongoDB,
+        name: "MONGO DB"
+      },
 
     ];
     setSkills(allSkills);

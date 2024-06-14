@@ -32,10 +32,10 @@ const Projects = () => {
       {
         img: filmflixAndroid,
         category: 'ongoing',
-        title: 'FILMFLIX Android app',
-        techStack: 'Technologies : React Native, React-Native-Paper',
+        title: 'FILMFLIX ',
+        techStack: 'Technologies : React Js, Chakra UI, Vidsrc Api',
         gitHubURL: 'https://github.com/sushankg18/FilmFlix-Android-App',
-        hostURL: '',
+        hostURL: 'https://filmix-one.vercel.app/',
       },
       {
         img: gameNestHub,
