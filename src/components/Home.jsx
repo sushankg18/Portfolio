@@ -83,6 +83,18 @@ const Home = () => {
         img: mongoDB,
         name: "MONGO DB"
       },
+      {
+        img: redux,
+        name: "REDUX/TOOLKIT"
+      },
+      {
+        img: JAVA,
+        name: "JAVA"
+      },
+      {
+        img: reactNative,
+        name: "REACT NATIVE"
+      },
 
     ];
     setSkills(allSkills);
