@@ -121,12 +121,14 @@ const Home = () => {
             lineHeight={'160%'}
             width={'80%'}
           >
-            👋 Hey there! I am a 2nd year BCA student with a keen interest in
-            web development. Being proficient in HTML, CSS, and JavaScript, I am
-            good at crafting interesting user interfaces using{' '}
-            <strong>React JS</strong> and
-            <strong>Chakra UI.</strong> Find my projects and let’s do something
-            amazing together! Happy to bring ideas to life through code.
+            👋 Hey there!
+            I’m a 3rd-year <strong> BCA student </strong> passionate about <strong> full-stack web development </strong>and crafting impactful
+            digital experiences. With intermediate in <strong> HTML, CSS, JavaScript,
+              and frameworks like React JS and Chakra UI </strong>, I excel in building dynamic and responsive user interfaces.
+           <br />  I specialize in creating full-stack applications using the <strong> MERN stack </strong>,
+            with hands-on experience in implementing <strong> secure authentication , real-time features,
+            and scalable backends </strong>. Check out my projects to see how I bring ideas to life through code.
+            Let’s collaborate and build something amazing together! 🚀
           </Text>
           <a href={resume} download="sushank gautam resume">
             <Button
